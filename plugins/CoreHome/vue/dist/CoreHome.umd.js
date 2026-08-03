@@ -3274,7 +3274,7 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_2$u = ["href", "title"];
   const _hoisted_3$q = { class: "iconsBar" };
   const _hoisted_4$l = ["href", "title"];
-  const _hoisted_5$j = ["title"];
+  const _hoisted_5$k = ["title"];
   const _hoisted_6$g = {
     key: 2,
     class: "ratingIcons"
@@ -3319,7 +3319,7 @@ var __async = (__this, __arguments, generator) => {
           title: _ctx.translate(_ctx.reportGenerated ? "General_HelpReport" : "General_Help")
         }, [..._cache[4] || (_cache[4] = [
           vue.createElementVNode("span", { class: "icon-info" }, null, -1)
-        ])], 10, _hoisted_5$j)) : vue.createCommentVNode("", true),
+        ])], 10, _hoisted_5$k)) : vue.createCommentVNode("", true),
         _ctx.showRateFeature ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_6$g, [
           (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.asComponent(_ctx.rateFeature)), { title: _ctx.actualFeatureName }, null, 8, ["title"]))
         ])) : vue.createCommentVNode("", true)
@@ -3428,7 +3428,7 @@ var __async = (__this, __arguments, generator) => {
     class: "card-title"
   };
   const _hoisted_4$k = { ref: "content" };
-  const _hoisted_5$i = {
+  const _hoisted_5$j = {
     key: 0,
     class: "card-image hide-on-med-and-down"
   };
@@ -3458,7 +3458,7 @@ var __async = (__this, __arguments, generator) => {
           vue.renderSlot(_ctx.$slots, "default")
         ], 512)
       ]),
-      _ctx.imageUrl ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_5$i, [
+      _ctx.imageUrl ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_5$j, [
         vue.createElementVNode("img", {
           src: _ctx.imageUrl,
           alt: _ctx.actualImageAltText
@@ -3524,7 +3524,7 @@ var __async = (__this, __arguments, generator) => {
       }));
       __publicField(this, "state", vue.readonly(this.privateState));
       // for tests
-      __publicField(this, "colors", vue.ref({}));
+      __publicField(this, "colors", {});
       __publicField(this, "segmentComparisons", vue.computed(() => this.parseSegmentComparisons()));
       __publicField(this, "periodComparisons", vue.computed(() => this.parsePeriodComparisons()));
       __publicField(this, "isEnabled", vue.computed(() => this.checkEnabledForCurrentPage()));
@@ -3536,7 +3536,7 @@ var __async = (__this, __arguments, generator) => {
         });
       }
       $(() => {
-        this.colors.value = this.getAllSeriesColors();
+        this.colors = this.getAllSeriesColors();
       });
       vue.watch(
         () => this.getUrlStateWithoutPopoverKey(),
@@ -3576,10 +3576,10 @@ var __async = (__this, __arguments, generator) => {
         segmentComparison.index
       ) % SERIES_COLOR_COUNT;
       if (metricIndex === 0) {
-        return this.colors.value[`series${seriesIndex}`];
+        return this.colors[`series${seriesIndex}`];
       }
       const shadeIndex = metricIndex % SERIES_SHADE_COUNT;
-      return this.colors.value[`series${seriesIndex}-shade${shadeIndex}`];
+      return this.colors[`series${seriesIndex}-shade${shadeIndex}`];
     }
     getSeriesColorName(seriesIndex, metricIndex) {
       let colorName = `series${seriesIndex % SERIES_COLOR_COUNT}`;
@@ -3612,7 +3612,7 @@ var __async = (__this, __arguments, generator) => {
           seriesInfo.push({
             index: seriesIndex,
             params: __spreadValues(__spreadValues({}, segmentComp.params), periodComp.params),
-            color: this.colors.value[`series${seriesIndex}`]
+            color: this.colors[`series${seriesIndex}`]
           });
           seriesIndex += 1;
         });
@@ -3935,7 +3935,7 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_2$s = { class: "comparison-type" };
   const _hoisted_3$o = ["title"];
   const _hoisted_4$j = ["href"];
-  const _hoisted_5$h = ["title"];
+  const _hoisted_5$i = ["title"];
   const _hoisted_6$e = { class: "comparison-period-label" };
   const _hoisted_7$a = ["onClick"];
   const _hoisted_8$9 = ["title"];
@@ -3976,7 +3976,7 @@ var __async = (__this, __arguments, generator) => {
                 })
               }, null, 4),
               vue.createElementVNode("span", _hoisted_6$e, vue.toDisplayString(periodComparison.title) + " (" + vue.toDisplayString(_ctx.getComparisonPeriodType(periodComparison)) + ") ", 1)
-            ], 8, _hoisted_5$h);
+            ], 8, _hoisted_5$i);
           }), 128)),
           _ctx.segmentComparisons.length > 1 ? (vue.openBlock(), vue.createElementBlock("a", {
             key: 0,
@@ -4066,7 +4066,7 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_2$r = ["title"];
   const _hoisted_3$n = ["innerHTML"];
   const _hoisted_4$i = { class: "items" };
-  const _hoisted_5$g = {
+  const _hoisted_5$h = {
     key: 0,
     class: "search"
   };
@@ -4089,7 +4089,7 @@ var __async = (__this, __arguments, generator) => {
         _cache[5] || (_cache[5] = vue.createElementVNode("span", { class: "icon-chevron-down reporting-menu-sub-icon" }, null, -1))
       ], 8, _hoisted_2$r),
       vue.withDirectives(vue.createElementVNode("div", _hoisted_4$i, [
-        _ctx.showSearch && _ctx.showItems ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_5$g, [
+        _ctx.showSearch && _ctx.showItems ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_5$h, [
           vue.withDirectives(vue.createElementVNode("input", {
             type: "text",
             "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => _ctx.searchTerm = $event),
@@ -4539,7 +4539,7 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_2$q = { id: "calendarRangeFrom" };
   const _hoisted_3$m = { class: "dateRangePicker-label" };
   const _hoisted_4$h = ["disabled"];
-  const _hoisted_5$f = { id: "calendarRangeTo" };
+  const _hoisted_5$g = { id: "calendarRangeTo" };
   const _hoisted_6$c = { class: "dateRangePicker-label" };
   const _hoisted_7$8 = ["disabled"];
   function _sfc_render$A(_ctx, _cache, $props, $setup, $data, $options) {
@@ -4574,7 +4574,7 @@ var __async = (__this, __arguments, generator) => {
           onCellHoverLeave: _cache[5] || (_cache[5] = ($event) => _ctx.fromPickerHoveredDate = null)
         }, null, 8, ["view-date", "selected-date-start", "selected-date-end", "highlighted-date-start", "highlighted-date-end", "disabled"])
       ]),
-      vue.createElementVNode("div", _hoisted_5$f, [
+      vue.createElementVNode("div", _hoisted_5$g, [
         vue.createElementVNode("h6", _hoisted_6$c, [
           vue.createTextVNode(vue.toDisplayString(_ctx.translate("General_DateRangeTo")) + " ", 1),
           vue.withDirectives(vue.createElementVNode("input", {
@@ -4846,7 +4846,7 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_2$p = ["data-notification-instance-id"];
   const _hoisted_3$l = { key: 1 };
   const _hoisted_4$g = { class: "notification-body" };
-  const _hoisted_5$e = ["innerHTML"];
+  const _hoisted_5$f = ["innerHTML"];
   const _hoisted_6$b = { key: 1 };
   function _sfc_render$y(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createBlock(vue.Transition, {
@@ -4884,7 +4884,7 @@ var __async = (__this, __arguments, generator) => {
                         _ctx.message ? (vue.openBlock(), vue.createElementBlock("div", {
                           key: 0,
                           innerHTML: _ctx.$sanitize(_ctx.message)
-                        }, null, 8, _hoisted_5$e)) : vue.createCommentVNode("", true),
+                        }, null, 8, _hoisted_5$f)) : vue.createCommentVNode("", true),
                         !_ctx.message ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_6$b, [
                           vue.renderSlot(_ctx.$slots, "default")
                         ])) : vue.createCommentVNode("", true)
@@ -5639,7 +5639,7 @@ var __async = (__this, __arguments, generator) => {
     key: 1,
     class: "placeholder"
   };
-  const _hoisted_5$d = { class: "dropdown" };
+  const _hoisted_5$e = { class: "dropdown" };
   const _hoisted_6$a = { class: "custom_select_search" };
   const _hoisted_7$7 = ["placeholder"];
   const _hoisted_8$7 = { key: 0 };
@@ -5686,7 +5686,7 @@ var __async = (__this, __arguments, generator) => {
       ], 42, _hoisted_2$n)), [
         [_directive_tooltips]
       ]),
-      vue.withDirectives(vue.createElementVNode("div", _hoisted_5$d, [
+      vue.withDirectives(vue.createElementVNode("div", _hoisted_5$e, [
         vue.withDirectives(vue.createElementVNode("div", _hoisted_6$a, [
           vue.withDirectives(vue.createElementVNode("input", {
             type: "text",
@@ -6400,7 +6400,7 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_2$m = { class: "mtm-searchInput" };
   const _hoisted_3$j = ["title", "placeholder"];
   const _hoisted_4$e = { class: "dropdown quickAccessDropdown" };
-  const _hoisted_5$c = { class: "no-result" };
+  const _hoisted_5$d = { class: "no-result" };
   const _hoisted_6$9 = ["onClick"];
   const _hoisted_7$6 = ["onMouseenter", "onClick"];
   const _hoisted_8$6 = { class: "quickAccessMatomoSearch" };
@@ -6435,7 +6435,7 @@ var __async = (__this, __arguments, generator) => {
       ]),
       vue.withDirectives(vue.createElementVNode("div", _hoisted_4$e, [
         vue.withDirectives(vue.createElementVNode("ul", null, [
-          vue.createElementVNode("li", _hoisted_5$c, vue.toDisplayString(_ctx.translate("General_SearchNoResults")), 1)
+          vue.createElementVNode("li", _hoisted_5$d, vue.toDisplayString(_ctx.translate("General_SearchNoResults")), 1)
         ], 512), [
           [vue.vShow, !(_ctx.numMenuItems > 0 || _ctx.sites.length)]
         ]),
@@ -6759,7 +6759,7 @@ var __async = (__this, __arguments, generator) => {
     key: 3,
     class: "fieldUiControl fieldUiControl4"
   };
-  const _hoisted_5$b = ["onClick", "title"];
+  const _hoisted_5$c = ["onClick", "title"];
   function _sfc_render$q(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_Field = vue.resolveComponent("Field");
     return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$o, [
@@ -6840,7 +6840,7 @@ var __async = (__this, __arguments, generator) => {
             onClick: ($event) => _ctx.removeEntry(index),
             class: "icon-minus valign",
             title: _ctx.translate("General_Remove")
-          }, null, 8, _hoisted_5$b), [
+          }, null, 8, _hoisted_5$c), [
             [vue.vShow, index + 1 !== (_ctx.modelValue || []).length]
           ])
         ], 2);
@@ -7306,7 +7306,7 @@ var __async = (__this, __arguments, generator) => {
   };
   const _hoisted_3$g = ["title", "onDblclick"];
   const _hoisted_4$c = ["name", "id", "checked", "onClick", "onChange"];
-  const _hoisted_5$a = { class: "preset-option-text" };
+  const _hoisted_5$b = { class: "preset-option-text" };
   function _sfc_render$p(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$n, [
       (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.groupedPresetDateRanges, (group, index) => {
@@ -7333,7 +7333,7 @@ var __async = (__this, __arguments, generator) => {
                   onClick: ($event) => _ctx.handlePresetClick(preset.id),
                   onChange: ($event) => _ctx.handlePresetSelected(preset.id)
                 }, null, 40, _hoisted_4$c),
-                vue.createElementVNode("span", _hoisted_5$a, vue.toDisplayString(_ctx.translate(preset.labelKey)), 1)
+                vue.createElementVNode("span", _hoisted_5$b, vue.toDisplayString(_ctx.translate(preset.labelKey)), 1)
               ], 42, _hoisted_3$g)
             ]);
           }), 128))
@@ -7562,7 +7562,7 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_2$f = { class: "compare-checkbox-label" };
   const _hoisted_3$e = ["checked"];
   const _hoisted_4$a = { class: "compare-checkbox-text" };
-  const _hoisted_5$9 = { id: "comparePeriodToDropdown" };
+  const _hoisted_5$a = { id: "comparePeriodToDropdown" };
   const _hoisted_6$8 = {
     key: 1,
     class: "compare-date-range"
@@ -7587,7 +7587,7 @@ var __async = (__this, __arguments, generator) => {
           }, null, 40, _hoisted_3$e),
           vue.createElementVNode("span", _hoisted_4$a, vue.toDisplayString(_ctx.translate("General_CompareTo")), 1)
         ]),
-        vue.createElementVNode("div", _hoisted_5$9, [
+        vue.createElementVNode("div", _hoisted_5$a, [
           vue.createVNode(_component_Field, {
             "model-value": _ctx.comparePeriodType,
             "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => _ctx.$emit("update:comparePeriodType", $event)),
@@ -8547,7 +8547,7 @@ var __async = (__this, __arguments, generator) => {
     key: 0,
     id: "ajaxLoadingCalendar"
   };
-  const _hoisted_5$8 = { class: "loadingSegment" };
+  const _hoisted_5$9 = { class: "loadingSegment" };
   const _hoisted_6$7 = ["disabled"];
   function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_PeriodSelectorOptionsColumn = vue.resolveComponent("PeriodSelectorOptionsColumn");
@@ -8624,7 +8624,7 @@ var __async = (__this, __arguments, generator) => {
         ]),
         _ctx.isLoadingNewPage ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$9, [
           vue.createVNode(_component_ActivityIndicator, { loading: true }),
-          vue.createElementVNode("div", _hoisted_5$8, vue.toDisplayString(_ctx.translate("SegmentEditor_LoadingSegmentedDataMayTakeSomeTime")), 1)
+          vue.createElementVNode("div", _hoisted_5$9, vue.toDisplayString(_ctx.translate("SegmentEditor_LoadingSegmentedDataMayTakeSomeTime")), 1)
         ])) : vue.createCommentVNode("", true)
       ], 2),
       _ctx.canShowMovePeriod ? (vue.openBlock(), vue.createElementBlock("button", {
@@ -8938,7 +8938,7 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_2$c = ["aria-label"];
   const _hoisted_3$b = ["data-category-id"];
   const _hoisted_4$8 = ["onClick"];
-  const _hoisted_5$7 = { class: "hidden" };
+  const _hoisted_5$8 = { class: "hidden" };
   const _hoisted_6$6 = {
     key: 2,
     role: "menu"
@@ -8990,7 +8990,7 @@ var __async = (__this, __arguments, generator) => {
                 class: vue.normalizeClass(`menu-icon ${category.icon ? category.icon : category.subcategories && category.id === _ctx.activeCategory ? "icon-chevron-down" : "icon-chevron-right"}`)
               }, null, 2),
               vue.createTextVNode(vue.toDisplayString(category.name) + " ", 1),
-              vue.createElementVNode("span", _hoisted_5$7, vue.toDisplayString(_ctx.translate("CoreHome_Menu")), 1)
+              vue.createElementVNode("span", _hoisted_5$8, vue.toDisplayString(_ctx.translate("CoreHome_Menu")), 1)
             ], 8, _hoisted_4$8)) : vue.createCommentVNode("", true),
             !category.component ? (vue.openBlock(), vue.createElementBlock("ul", _hoisted_6$6, [
               (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(category.subcategories, (subcategory) => {
@@ -9190,6 +9190,7 @@ var __async = (__this, __arguments, generator) => {
     ]);
   }
   const WidgetControls = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$i]]);
+  const SEARCH_DEBOUNCE_MS = 300;
   const CONTROLS_BY_CONTEXT = {
     dashboard: {
       minimise: true,
@@ -9258,12 +9259,6 @@ var __async = (__this, __arguments, generator) => {
       enriched: Boolean,
       // Keeps the plain heading metrics of a report that is not shown in a card.
       plainTitle: Boolean,
-      // A titleless widgetized embed still mounts the header as an actions anchor, so only the
-      // heading is suppressed, not the whole component.
-      showTitle: {
-        type: Boolean,
-        default: true
-      },
       // Left empty on purpose: EnrichedHeadline then names the rated feature after the rendered
       // title, i.e. the widget name. Only dataTable.js sets it, to follow a related report.
       featureName: {
@@ -9285,13 +9280,42 @@ var __async = (__this, __arguments, generator) => {
       helpUrl: {
         type: String,
         default: ""
+      },
+      // Renders the report search input under the title. dataTable.js drives this from the
+      // report's `show_search` config.
+      showSearch: Boolean,
+      // The current server-side search pattern, pushed back after each reload so the field stays
+      // in sync (prefill on load, related-report switch, programmatic clear).
+      searchQuery: {
+        type: String,
+        default: ""
+      },
+      searchPlaceholder: {
+        type: String,
+        default: ""
       }
     },
     components: {
       EnrichedHeadline,
+      SearchInput,
       WidgetControls
     },
-    emits: ["minimise", "maximise", "refresh", "close", "titleClick"],
+    emits: ["minimise", "maximise", "refresh", "close", "titleClick", "search"],
+    data() {
+      return {
+        // Local mirror of the search field. Seeded from `searchQuery`; user input schedules a
+        // debounced search, a `searchQuery` change syncs it back without re-triggering one.
+        query: this.searchQuery,
+        searchDebounceTimer: null
+      };
+    },
+    watch: {
+      searchQuery(value) {
+        if (value !== this.query) {
+          this.query = value;
+        }
+      }
+    },
     computed: {
       controls() {
         return CONTROLS_BY_CONTEXT[this.context] || CONTROLS_BY_CONTEXT.widgetized;
@@ -9299,11 +9323,6 @@ var __async = (__this, __arguments, generator) => {
       hasControls() {
         const c = this.controls;
         return c.minimise || c.maximise || c.refresh || c.close;
-      },
-      // No title and no controls to render. Actions are always empty today; a later story that adds
-      // them must widen this so the full header comes back.
-      isEmpty() {
-        return !this.showTitle && !this.hasControls;
       },
       isFullPage() {
         return this.context === "fullPage";
@@ -9330,29 +9349,57 @@ var __async = (__this, __arguments, generator) => {
       onControl(intent) {
         this.$emit(intent);
         this.$el.dispatchEvent(new CustomEvent(`widgetcontrol:${intent}`, { bubbles: true }));
+      },
+      onQueryInput(value) {
+        this.query = value;
+        if (this.searchDebounceTimer) {
+          clearTimeout(this.searchDebounceTimer);
+          this.searchDebounceTimer = null;
+        }
+        if (!value) {
+          this.dispatchSearch();
+          return;
+        }
+        this.searchDebounceTimer = setTimeout(() => this.dispatchSearch(), SEARCH_DEBOUNCE_MS);
+      },
+      dispatchSearch() {
+        this.searchDebounceTimer = null;
+        this.$emit("search", { keyword: this.query });
+        this.$el.dispatchEvent(new CustomEvent("reportheader:search", {
+          bubbles: true,
+          detail: { keyword: this.query }
+        }));
+      }
+    },
+    beforeUnmount() {
+      if (this.searchDebounceTimer) {
+        clearTimeout(this.searchDebounceTimer);
       }
     }
   });
   const _hoisted_1$f = { class: "reportHeader__main" };
   const _hoisted_2$a = { key: 1 };
   const _hoisted_3$a = {
-    key: 1,
+    key: 0,
     class: "u-visuallyHidden"
   };
-  const _hoisted_4$7 = { class: "reportHeader__widgetControls" };
+  const _hoisted_4$7 = {
+    key: 1,
+    class: "reportHeader__search"
+  };
+  const _hoisted_5$7 = { class: "reportHeader__widgetControls" };
   function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_EnrichedHeadline = vue.resolveComponent("EnrichedHeadline");
+    const _component_SearchInput = vue.resolveComponent("SearchInput");
     const _component_WidgetControls = vue.resolveComponent("WidgetControls");
-    return !_ctx.isEmpty ? (vue.openBlock(), vue.createElementBlock("div", {
-      key: 0,
+    return vue.openBlock(), vue.createElementBlock("div", {
       class: vue.normalizeClass(["reportHeader", {
         "reportHeader--flush": _ctx.isFullPage && !_ctx.plainTitle,
         "reportHeader--plainTitle": _ctx.plainTitle
       }])
     }, [
       vue.createElementVNode("div", _hoisted_1$f, [
-        _ctx.showTitle ? (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.titleTag), {
-          key: 0,
+        (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.titleTag), {
           class: vue.normalizeClass(["reportHeader__title widgetName", { "reportHeader__title--clickable": _ctx.titleClickable }]),
           role: _ctx.titleClickable ? "button" : void 0,
           tabindex: _ctx.titleClickable ? 0 : void 0,
@@ -9379,10 +9426,18 @@ var __async = (__this, __arguments, generator) => {
             }, 8, ["feature-name", "inline-help", "report-generated", "edit-url", "help-url"])) : (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$a, vue.toDisplayString(_ctx.titleText), 1))
           ]),
           _: 1
-        }, 40, ["class", "role", "tabindex", "title", "onClick", "onKeydown"])) : vue.createCommentVNode("", true),
-        !_ctx.isFullPage ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$a, vue.toDisplayString(_ctx.translate("General_Widget")), 1)) : vue.createCommentVNode("", true)
+        }, 40, ["class", "role", "tabindex", "title", "onClick", "onKeydown"])),
+        !_ctx.isFullPage ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$a, vue.toDisplayString(_ctx.translate("General_Widget")), 1)) : vue.createCommentVNode("", true),
+        _ctx.showSearch ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$7, [
+          vue.createVNode(_component_SearchInput, {
+            "model-value": _ctx.query,
+            placeholder: _ctx.searchPlaceholder,
+            "show-clear": true,
+            "onUpdate:modelValue": _ctx.onQueryInput
+          }, null, 8, ["model-value", "placeholder", "onUpdate:modelValue"])
+        ])) : vue.createCommentVNode("", true)
       ]),
-      vue.createElementVNode("div", _hoisted_4$7, [
+      vue.createElementVNode("div", _hoisted_5$7, [
         _ctx.hasControls ? (vue.openBlock(), vue.createBlock(_component_WidgetControls, {
           key: 0,
           "can-minimise": _ctx.controls.minimise,
@@ -9396,7 +9451,7 @@ var __async = (__this, __arguments, generator) => {
         }, null, 8, ["can-minimise", "can-maximise", "can-refresh", "can-close"])) : vue.createCommentVNode("", true)
       ]),
       _cache[4] || (_cache[4] = vue.createElementVNode("div", { class: "reportHeader__actions" }, null, -1))
-    ], 2)) : vue.createCommentVNode("", true);
+    ], 2);
   }
   const ReportHeader = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$h]]);
   /*!
@@ -11147,7 +11202,8 @@ var __async = (__this, __arguments, generator) => {
           );
         }
         const colors = JSON.stringify(sparklineColors);
-        const sizeParams = __spreadValues(__spreadValues({}, typeof this.width === "number" ? { width: this.width * 2 } : {}), typeof this.height === "number" ? { height: this.height * 2 } : {});
+        const redesignEnabled = document.body.classList.contains("sparklines-redesign-enabled");
+        const sizeParams = redesignEnabled ? __spreadValues(__spreadValues({}, typeof this.width === "number" ? { width: this.width * 2 } : {}), typeof this.height === "number" ? { height: this.height * 2 } : {}) : {};
         const defaultParams = __spreadProps(__spreadValues({
           forceView: "1",
           viewDataTable: "sparkline",
@@ -11696,27 +11752,24 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_12$1 = ["title"];
   const _hoisted_13$1 = ["title"];
   const _hoisted_14 = ["title"];
-  const _hoisted_15 = ["title"];
-  const _hoisted_16 = ["id", "title"];
-  const _hoisted_17 = ["title"];
-  const _hoisted_18 = ["title", "src"];
-  const _hoisted_19 = ["id"];
-  const _hoisted_20 = { key: 0 };
-  const _hoisted_21 = ["innerHTML"];
-  const _hoisted_22 = { key: 1 };
-  const _hoisted_23 = ["innerHTML"];
-  const _hoisted_24 = { key: 2 };
-  const _hoisted_25 = ["innerHTML"];
-  const _hoisted_26 = { key: 3 };
-  const _hoisted_27 = ["innerHTML"];
-  const _hoisted_28 = { key: 4 };
-  const _hoisted_29 = ["innerHTML"];
-  const _hoisted_30 = { key: 5 };
-  const _hoisted_31 = ["innerHTML"];
-  const _hoisted_32 = ["title", "data-target"];
-  const _hoisted_33 = { class: "periodName" };
-  const _hoisted_34 = ["id"];
-  const _hoisted_35 = ["data-period"];
+  const _hoisted_15 = ["title", "src"];
+  const _hoisted_16 = ["id"];
+  const _hoisted_17 = { key: 0 };
+  const _hoisted_18 = ["innerHTML"];
+  const _hoisted_19 = { key: 1 };
+  const _hoisted_20 = ["innerHTML"];
+  const _hoisted_21 = { key: 2 };
+  const _hoisted_22 = ["innerHTML"];
+  const _hoisted_23 = { key: 3 };
+  const _hoisted_24 = ["innerHTML"];
+  const _hoisted_25 = { key: 4 };
+  const _hoisted_26 = ["innerHTML"];
+  const _hoisted_27 = { key: 5 };
+  const _hoisted_28 = ["innerHTML"];
+  const _hoisted_29 = ["title", "data-target"];
+  const _hoisted_30 = { class: "periodName" };
+  const _hoisted_31 = ["id"];
+  const _hoisted_32 = ["data-period"];
   function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_Passthrough = vue.resolveComponent("Passthrough");
     const _directive_dropdown_button = vue.resolveDirective("dropdown-button");
@@ -11731,7 +11784,7 @@ var __async = (__this, __arguments, generator) => {
         "data-target": `dropdownConfigure${_ctx.randomIdForDropdown}`,
         title: _ctx.translate("CoreHome_ReportConfigure"),
         style: { "margin-right": "3.5px" }
-      }, [..._cache[8] || (_cache[8] = [
+      }, [..._cache[7] || (_cache[7] = [
         vue.createElementVNode("span", { class: "icon-configure" }, null, -1)
       ])], 10, _hoisted_2$3)), [
         [_directive_dropdown_button]
@@ -11793,12 +11846,12 @@ var __async = (__this, __arguments, generator) => {
                   ], 10, _hoisted_7$2)
                 ]);
               }), 128)),
-              _cache[9] || (_cache[9] = vue.createElementVNode("li", { class: "divider" }, null, -1))
+              _cache[8] || (_cache[8] = vue.createElementVNode("li", { class: "divider" }, null, -1))
             ]),
             _: 2
           }, 1024);
         }), 128)),
-        _cache[10] || (_cache[10] = vue.createElementVNode("li", { class: "divider" }, null, -1))
+        _cache[9] || (_cache[9] = vue.createElementVNode("li", { class: "divider" }, null, -1))
       ], 8, _hoisted_6$2)) : vue.createCommentVNode("", true),
       _ctx.showExport ? vue.withDirectives((vue.openBlock(), vue.createElementBlock("a", {
         key: 3,
@@ -11808,7 +11861,7 @@ var __async = (__this, __arguments, generator) => {
         style: { "margin-right": "3.5px" },
         onClick: _cache[2] || (_cache[2] = vue.withModifiers(() => {
         }, ["prevent"]))
-      }, [..._cache[11] || (_cache[11] = [
+      }, [..._cache[10] || (_cache[10] = [
         vue.createElementVNode("span", { class: "icon-export" }, null, -1)
       ])], 8, _hoisted_11$1)), [
         [_directive_report_export, {
@@ -11828,7 +11881,7 @@ var __async = (__this, __arguments, generator) => {
         onClick: _cache[3] || (_cache[3] = vue.withModifiers(($event) => _ctx.showExportImage($event), ["prevent"])),
         title: _ctx.translate("General_ExportAsImage"),
         style: { "margin-right": "3.5px" }
-      }, [..._cache[12] || (_cache[12] = [
+      }, [..._cache[11] || (_cache[11] = [
         vue.createElementVNode("span", { class: "icon-image" }, null, -1)
       ])], 8, _hoisted_12$1)) : vue.createCommentVNode("", true),
       _ctx.showAnnotations ? (vue.openBlock(), vue.createElementBlock("a", {
@@ -11839,41 +11892,15 @@ var __async = (__this, __arguments, generator) => {
         onClick: _cache[4] || (_cache[4] = vue.withModifiers(() => {
         }, ["prevent"])),
         style: { "margin-right": "3.5px" }
-      }, [..._cache[13] || (_cache[13] = [
+      }, [..._cache[12] || (_cache[12] = [
         vue.createElementVNode("span", { class: "icon-annotation" }, null, -1)
       ])], 8, _hoisted_13$1)) : vue.createCommentVNode("", true),
-      _ctx.showSearch ? (vue.openBlock(), vue.createElementBlock("a", {
-        key: 6,
-        class: "dropdown-button dataTableAction searchAction",
-        href: "",
-        title: _ctx.translate("General_Search"),
-        style: { "margin-right": "3.5px" },
-        draggable: "false",
-        onClick: _cache[5] || (_cache[5] = vue.withModifiers(() => {
-        }, ["prevent"]))
-      }, [
-        _cache[14] || (_cache[14] = vue.createElementVNode("span", {
-          class: "icon-search",
-          draggable: "false"
-        }, null, -1)),
-        vue.createElementVNode("span", {
-          class: "icon-close",
-          draggable: "false",
-          title: _ctx.translate("CoreHome_CloseSearch")
-        }, null, 8, _hoisted_15),
-        vue.createElementVNode("input", {
-          id: `widgetSearch_${_ctx.reportId}_${_ctx.placement}`,
-          title: _ctx.translate("CoreHome_DataTableHowToSearch"),
-          type: "text",
-          class: "dataTableSearchInput"
-        }, null, 8, _hoisted_16)
-      ], 8, _hoisted_14)) : vue.createCommentVNode("", true),
       (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.dataTableActions, (action) => {
         return vue.openBlock(), vue.createElementBlock("a", {
           key: action.id,
           class: vue.normalizeClass(`dataTableAction ${action.id}`),
           href: "",
-          onClick: _cache[6] || (_cache[6] = vue.withModifiers(() => {
+          onClick: _cache[5] || (_cache[5] = vue.withModifiers(() => {
           }, ["prevent"])),
           title: action.title,
           style: { "margin-right": "3.5px" }
@@ -11887,68 +11914,68 @@ var __async = (__this, __arguments, generator) => {
             height: "16",
             title: action.title,
             src: action.icon
-          }, null, 8, _hoisted_18))
-        ], 10, _hoisted_17);
+          }, null, 8, _hoisted_15))
+        ], 10, _hoisted_14);
       }), 128)),
       vue.createElementVNode("ul", {
         id: `dropdownConfigure${_ctx.randomIdForDropdown}`,
         class: "dropdown-content tableConfiguration"
       }, [
-        _ctx.showFlattenTable ? (vue.openBlock(), vue.createElementBlock("li", _hoisted_20, [
+        _ctx.showFlattenTable ? (vue.openBlock(), vue.createElementBlock("li", _hoisted_17, [
           vue.createElementVNode("div", {
             class: "configItem dataTableFlatten",
             innerHTML: _ctx.$sanitize(_ctx.flattenItemText)
-          }, null, 8, _hoisted_21)
+          }, null, 8, _hoisted_18)
         ])) : vue.createCommentVNode("", true),
-        _ctx.showDimensionsConfigItem ? (vue.openBlock(), vue.createElementBlock("li", _hoisted_22, [
+        _ctx.showDimensionsConfigItem ? (vue.openBlock(), vue.createElementBlock("li", _hoisted_19, [
           vue.createElementVNode("div", {
             class: "configItem dataTableShowDimensions",
             innerHTML: _ctx.$sanitize(_ctx.showDimensionsText)
-          }, null, 8, _hoisted_23)
+          }, null, 8, _hoisted_20)
         ])) : vue.createCommentVNode("", true),
-        _ctx.showFlatConfigItem ? (vue.openBlock(), vue.createElementBlock("li", _hoisted_24, [
+        _ctx.showFlatConfigItem ? (vue.openBlock(), vue.createElementBlock("li", _hoisted_21, [
           vue.createElementVNode("div", {
             class: "configItem dataTableIncludeAggregateRows",
             innerHTML: _ctx.$sanitize(_ctx.includeAggregateRowsText)
-          }, null, 8, _hoisted_25)
+          }, null, 8, _hoisted_22)
         ])) : vue.createCommentVNode("", true),
-        _ctx.showTotalsConfigItem ? (vue.openBlock(), vue.createElementBlock("li", _hoisted_26, [
+        _ctx.showTotalsConfigItem ? (vue.openBlock(), vue.createElementBlock("li", _hoisted_23, [
           vue.createElementVNode("div", {
             class: "configItem dataTableShowTotalsRow",
             innerHTML: _ctx.$sanitize(_ctx.keepTotalsRowText)
-          }, null, 8, _hoisted_27)
+          }, null, 8, _hoisted_24)
         ])) : vue.createCommentVNode("", true),
-        _ctx.showExcludeLowPopulation ? (vue.openBlock(), vue.createElementBlock("li", _hoisted_28, [
+        _ctx.showExcludeLowPopulation ? (vue.openBlock(), vue.createElementBlock("li", _hoisted_25, [
           vue.createElementVNode("div", {
             class: "configItem dataTableExcludeLowPopulation",
             innerHTML: _ctx.$sanitize(_ctx.excludeLowPopText)
-          }, null, 8, _hoisted_29)
+          }, null, 8, _hoisted_26)
         ])) : vue.createCommentVNode("", true),
-        _ctx.showPivotBySubtable ? (vue.openBlock(), vue.createElementBlock("li", _hoisted_30, [
+        _ctx.showPivotBySubtable ? (vue.openBlock(), vue.createElementBlock("li", _hoisted_27, [
           vue.createElementVNode("div", {
             class: "configItem dataTablePivotBySubtable",
             innerHTML: _ctx.$sanitize(_ctx.pivotByText)
-          }, null, 8, _hoisted_31)
+          }, null, 8, _hoisted_28)
         ])) : vue.createCommentVNode("", true)
-      ], 8, _hoisted_19),
+      ], 8, _hoisted_16),
       _ctx.showPeriods ? vue.withDirectives((vue.openBlock(), vue.createElementBlock("a", {
-        key: 7,
+        key: 6,
         class: "dropdown-button dataTableAction activatePeriodsSelection",
         href: "",
-        onClick: _cache[7] || (_cache[7] = vue.withModifiers(() => {
+        onClick: _cache[6] || (_cache[6] = vue.withModifiers(() => {
         }, ["prevent"])),
         title: _ctx.translate("CoreHome_ChangePeriod"),
         "data-target": `dropdownPeriods${_ctx.randomIdForDropdown}`
       }, [
         vue.createElementVNode("div", null, [
-          _cache[15] || (_cache[15] = vue.createElementVNode("span", { class: "icon-calendar" }, null, -1)),
-          vue.createElementVNode("span", _hoisted_33, vue.toDisplayString(_ctx.translations[_ctx.clientSideParameters.period] || _ctx.clientSideParameters.period), 1)
+          _cache[13] || (_cache[13] = vue.createElementVNode("span", { class: "icon-calendar" }, null, -1)),
+          vue.createElementVNode("span", _hoisted_30, vue.toDisplayString(_ctx.translations[_ctx.clientSideParameters.period] || _ctx.clientSideParameters.period), 1)
         ])
-      ], 8, _hoisted_32)), [
+      ], 8, _hoisted_29)), [
         [_directive_dropdown_button]
       ]) : vue.createCommentVNode("", true),
       _ctx.showPeriods ? (vue.openBlock(), vue.createElementBlock("ul", {
-        key: 8,
+        key: 7,
         id: `dropdownPeriods${_ctx.randomIdForDropdown}`,
         class: "dropdown-content dataTablePeriods"
       }, [
@@ -11959,10 +11986,10 @@ var __async = (__this, __arguments, generator) => {
               class: vue.normalizeClass(`tableIcon ${_ctx.clientSideParameters.period === selectablePeriod ? "activeIcon" : ""}`)
             }, [
               vue.createElementVNode("span", null, vue.toDisplayString(_ctx.translations[selectablePeriod] || selectablePeriod), 1)
-            ], 10, _hoisted_35)
+            ], 10, _hoisted_32)
           ]);
         }), 128))
-      ], 8, _hoisted_34)) : vue.createCommentVNode("", true)
+      ], 8, _hoisted_31)) : vue.createCommentVNode("", true)
     ])) : vue.createCommentVNode("", true);
   }
   const DataTableActions = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$5]]);
