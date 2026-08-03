@@ -9258,6 +9258,12 @@ var __async = (__this, __arguments, generator) => {
       enriched: Boolean,
       // Keeps the plain heading metrics of a report that is not shown in a card.
       plainTitle: Boolean,
+      // A titleless widgetized embed still mounts the header as an actions anchor, so only the
+      // heading is suppressed, not the whole component.
+      showTitle: {
+        type: Boolean,
+        default: true
+      },
       // Left empty on purpose: EnrichedHeadline then names the rated feature after the rendered
       // title, i.e. the widget name. Only dataTable.js sets it, to follow a related report.
       featureName: {
@@ -9294,6 +9300,11 @@ var __async = (__this, __arguments, generator) => {
         const c = this.controls;
         return c.minimise || c.maximise || c.refresh || c.close;
       },
+      // No title and no controls to render. Actions are always empty today; a later story that adds
+      // them must widen this so the full header comes back.
+      isEmpty() {
+        return !this.showTitle && !this.hasControls;
+      },
       isFullPage() {
         return this.context === "fullPage";
       },
@@ -9325,21 +9336,23 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_1$f = { class: "reportHeader__main" };
   const _hoisted_2$a = { key: 1 };
   const _hoisted_3$a = {
-    key: 0,
+    key: 1,
     class: "u-visuallyHidden"
   };
   const _hoisted_4$7 = { class: "reportHeader__widgetControls" };
   function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_EnrichedHeadline = vue.resolveComponent("EnrichedHeadline");
     const _component_WidgetControls = vue.resolveComponent("WidgetControls");
-    return vue.openBlock(), vue.createElementBlock("div", {
+    return !_ctx.isEmpty ? (vue.openBlock(), vue.createElementBlock("div", {
+      key: 0,
       class: vue.normalizeClass(["reportHeader", {
         "reportHeader--flush": _ctx.isFullPage && !_ctx.plainTitle,
         "reportHeader--plainTitle": _ctx.plainTitle
       }])
     }, [
       vue.createElementVNode("div", _hoisted_1$f, [
-        (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.titleTag), {
+        _ctx.showTitle ? (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.titleTag), {
+          key: 0,
           class: vue.normalizeClass(["reportHeader__title widgetName", { "reportHeader__title--clickable": _ctx.titleClickable }]),
           role: _ctx.titleClickable ? "button" : void 0,
           tabindex: _ctx.titleClickable ? 0 : void 0,
@@ -9366,7 +9379,7 @@ var __async = (__this, __arguments, generator) => {
             }, 8, ["feature-name", "inline-help", "report-generated", "edit-url", "help-url"])) : (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$a, vue.toDisplayString(_ctx.titleText), 1))
           ]),
           _: 1
-        }, 40, ["class", "role", "tabindex", "title", "onClick", "onKeydown"])),
+        }, 40, ["class", "role", "tabindex", "title", "onClick", "onKeydown"])) : vue.createCommentVNode("", true),
         !_ctx.isFullPage ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$a, vue.toDisplayString(_ctx.translate("General_Widget")), 1)) : vue.createCommentVNode("", true)
       ]),
       vue.createElementVNode("div", _hoisted_4$7, [
@@ -9383,7 +9396,7 @@ var __async = (__this, __arguments, generator) => {
         }, null, 8, ["can-minimise", "can-maximise", "can-refresh", "can-close"])) : vue.createCommentVNode("", true)
       ]),
       _cache[4] || (_cache[4] = vue.createElementVNode("div", { class: "reportHeader__actions" }, null, -1))
-    ], 2);
+    ], 2)) : vue.createCommentVNode("", true);
   }
   const ReportHeader = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$h]]);
   /*!
