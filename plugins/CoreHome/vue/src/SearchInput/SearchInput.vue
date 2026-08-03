@@ -16,12 +16,14 @@
       :value="modelValue"
       :placeholder="resolvedPlaceholder"
       v-bind="$attrs"
+      v-focus-if="{ focused }"
       @input="onInput($event)"
     >
     <button
       v-if="showClear && modelValue"
       type="button"
       class="mtm-searchInput__clear"
+      :title="translate('General_Clear')"
       @click="onClear()"
     />
   </div>
@@ -29,6 +31,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import FocusIf from '../FocusIf/FocusIf';
 import { translate } from '../translate';
 
 export default defineComponent({
@@ -47,8 +50,15 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+    focused: {
+      type: Boolean,
+      default: false,
+    },
   },
   emits: ['update:modelValue'],
+  directives: {
+    FocusIf,
+  },
   computed: {
     resolvedPlaceholder() {
       return this.placeholder || translate('General_Search');

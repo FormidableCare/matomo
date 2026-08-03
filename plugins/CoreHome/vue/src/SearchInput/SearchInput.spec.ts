@@ -54,4 +54,39 @@ describe('CoreHome/SearchInput', () => {
 
     expect(wrapper.emitted('update:modelValue')?.[0]).toEqual(['']);
   });
+
+  it('gives the clear button a translated title', () => {
+    const wrapper = mount(SearchInput, {
+      props: {
+        modelValue: 'country',
+        showClear: true,
+      },
+    });
+
+    expect(wrapper.find('.mtm-searchInput__clear').attributes('title')).toBe('General_Clear');
+  });
+
+  it('focuses the input when the focused prop becomes true', async () => {
+    vi.useFakeTimers();
+
+    const wrapper = mount(SearchInput, {
+      props: {
+        modelValue: '',
+        focused: false,
+      },
+      attachTo: document.body,
+    });
+
+    try {
+      expect(document.activeElement).not.toBe(wrapper.find('input').element);
+
+      await wrapper.setProps({ focused: true });
+      vi.advanceTimersByTime(10);
+
+      expect(document.activeElement).toBe(wrapper.find('input').element);
+    } finally {
+      vi.useRealTimers();
+      wrapper.unmount();
+    }
+  });
 });
