@@ -3272,7 +3272,7 @@ var __async = (__this, __arguments, generator) => {
     tabindex: "6"
   };
   const _hoisted_2$u = ["href", "title"];
-  const _hoisted_3$q = { class: "iconsBar" };
+  const _hoisted_3$r = { class: "iconsBar" };
   const _hoisted_4$l = ["href", "title"];
   const _hoisted_5$k = ["title"];
   const _hoisted_6$g = {
@@ -3301,7 +3301,7 @@ var __async = (__this, __arguments, generator) => {
       }, [
         vue.renderSlot(_ctx.$slots, "default")
       ], 8, _hoisted_2$u)) : vue.createCommentVNode("", true),
-      vue.withDirectives(vue.createElementVNode("span", _hoisted_3$q, [
+      vue.withDirectives(vue.createElementVNode("span", _hoisted_3$r, [
         _ctx.helpUrl && !_ctx.actualInlineHelp ? (vue.openBlock(), vue.createElementBlock("a", {
           key: 0,
           rel: "noreferrer noopener",
@@ -3423,7 +3423,7 @@ var __async = (__this, __arguments, generator) => {
     key: 0,
     class: "card-title"
   };
-  const _hoisted_3$p = {
+  const _hoisted_3$q = {
     key: 1,
     class: "card-title"
   };
@@ -3441,7 +3441,7 @@ var __async = (__this, __arguments, generator) => {
     }, [
       vue.createElementVNode("div", _hoisted_1$A, [
         _ctx.contentTitle && !_ctx.actualFeature && !_ctx.helpUrl && !_ctx.actualHelpText && !_ctx.editUrl ? (vue.openBlock(), vue.createElementBlock("h2", _hoisted_2$t, vue.toDisplayString(_ctx.decode(_ctx.contentTitle)), 1)) : vue.createCommentVNode("", true),
-        _ctx.contentTitle && (_ctx.actualFeature || _ctx.helpUrl || _ctx.actualHelpText || _ctx.editUrl) ? (vue.openBlock(), vue.createElementBlock("h2", _hoisted_3$p, [
+        _ctx.contentTitle && (_ctx.actualFeature || _ctx.helpUrl || _ctx.actualHelpText || _ctx.editUrl) ? (vue.openBlock(), vue.createElementBlock("h2", _hoisted_3$q, [
           vue.createVNode(_component_EnrichedHeadline, {
             "feature-name": _ctx.actualFeature,
             "help-url": _ctx.helpUrl,
@@ -3524,7 +3524,7 @@ var __async = (__this, __arguments, generator) => {
       }));
       __publicField(this, "state", vue.readonly(this.privateState));
       // for tests
-      __publicField(this, "colors", {});
+      __publicField(this, "colors", vue.ref({}));
       __publicField(this, "segmentComparisons", vue.computed(() => this.parseSegmentComparisons()));
       __publicField(this, "periodComparisons", vue.computed(() => this.parsePeriodComparisons()));
       __publicField(this, "isEnabled", vue.computed(() => this.checkEnabledForCurrentPage()));
@@ -3536,7 +3536,7 @@ var __async = (__this, __arguments, generator) => {
         });
       }
       $(() => {
-        this.colors = this.getAllSeriesColors();
+        this.colors.value = this.getAllSeriesColors();
       });
       vue.watch(
         () => this.getUrlStateWithoutPopoverKey(),
@@ -3576,10 +3576,10 @@ var __async = (__this, __arguments, generator) => {
         segmentComparison.index
       ) % SERIES_COLOR_COUNT;
       if (metricIndex === 0) {
-        return this.colors[`series${seriesIndex}`];
+        return this.colors.value[`series${seriesIndex}`];
       }
       const shadeIndex = metricIndex % SERIES_SHADE_COUNT;
-      return this.colors[`series${seriesIndex}-shade${shadeIndex}`];
+      return this.colors.value[`series${seriesIndex}-shade${shadeIndex}`];
     }
     getSeriesColorName(seriesIndex, metricIndex) {
       let colorName = `series${seriesIndex % SERIES_COLOR_COUNT}`;
@@ -3612,7 +3612,7 @@ var __async = (__this, __arguments, generator) => {
           seriesInfo.push({
             index: seriesIndex,
             params: __spreadValues(__spreadValues({}, segmentComp.params), periodComp.params),
-            color: this.colors[`series${seriesIndex}`]
+            color: this.colors.value[`series${seriesIndex}`]
           });
           seriesIndex += 1;
         });
@@ -3933,7 +3933,7 @@ var __async = (__this, __arguments, generator) => {
     class: "matomo-comparisons"
   };
   const _hoisted_2$s = { class: "comparison-type" };
-  const _hoisted_3$o = ["title"];
+  const _hoisted_3$p = ["title"];
   const _hoisted_4$j = ["href"];
   const _hoisted_5$i = ["title"];
   const _hoisted_6$e = { class: "comparison-period-label" };
@@ -3962,7 +3962,7 @@ var __async = (__this, __arguments, generator) => {
               target: "_blank",
               href: _ctx.getUrlToSegment(comparison.params.segment)
             }, vue.toDisplayString(comparison.title), 9, _hoisted_4$j)
-          ], 8, _hoisted_3$o),
+          ], 8, _hoisted_3$p),
           (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.periodComparisons, (periodComparison) => {
             return vue.openBlock(), vue.createElementBlock("div", {
               class: "comparison-period",
@@ -4064,7 +4064,7 @@ var __async = (__this, __arguments, generator) => {
     class: "menuDropdown"
   };
   const _hoisted_2$r = ["title"];
-  const _hoisted_3$n = ["innerHTML"];
+  const _hoisted_3$o = ["innerHTML"];
   const _hoisted_4$i = { class: "items" };
   const _hoisted_5$h = {
     key: 0,
@@ -4085,7 +4085,7 @@ var __async = (__this, __arguments, generator) => {
         vue.createElementVNode("span", {
           class: "title-label",
           innerHTML: _ctx.$sanitize(_ctx.actualMenuTitle)
-        }, null, 8, _hoisted_3$n),
+        }, null, 8, _hoisted_3$o),
         _cache[5] || (_cache[5] = vue.createElementVNode("span", { class: "icon-chevron-down reporting-menu-sub-icon" }, null, -1))
       ], 8, _hoisted_2$r),
       vue.withDirectives(vue.createElementVNode("div", _hoisted_4$i, [
@@ -4537,7 +4537,7 @@ var __async = (__this, __arguments, generator) => {
   });
   const _hoisted_1$w = { class: "dateRangePicker" };
   const _hoisted_2$q = { id: "calendarRangeFrom" };
-  const _hoisted_3$m = { class: "dateRangePicker-label" };
+  const _hoisted_3$n = { class: "dateRangePicker-label" };
   const _hoisted_4$h = ["disabled"];
   const _hoisted_5$g = { id: "calendarRangeTo" };
   const _hoisted_6$c = { class: "dateRangePicker-label" };
@@ -4546,7 +4546,7 @@ var __async = (__this, __arguments, generator) => {
     const _component_DatePicker = vue.resolveComponent("DatePicker");
     return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$w, [
       vue.createElementVNode("div", _hoisted_2$q, [
-        vue.createElementVNode("h6", _hoisted_3$m, [
+        vue.createElementVNode("h6", _hoisted_3$n, [
           vue.createTextVNode(vue.toDisplayString(_ctx.translate("General_DateRangeFrom")) + " ", 1),
           vue.withDirectives(vue.createElementVNode("input", {
             type: "text",
@@ -4844,7 +4844,7 @@ var __async = (__this, __arguments, generator) => {
   });
   const _hoisted_1$v = { key: 0 };
   const _hoisted_2$p = ["data-notification-instance-id"];
-  const _hoisted_3$l = { key: 1 };
+  const _hoisted_3$m = { key: 1 };
   const _hoisted_4$g = { class: "notification-body" };
   const _hoisted_5$f = ["innerHTML"];
   const _hoisted_6$b = { key: 1 };
@@ -4879,7 +4879,7 @@ var __async = (__this, __arguments, generator) => {
                         "data-dismiss": "alert",
                         onClick: _cache[0] || (_cache[0] = ($event) => _ctx.closeNotification($event))
                       }, " × ")) : vue.createCommentVNode("", true),
-                      _ctx.title ? (vue.openBlock(), vue.createElementBlock("strong", _hoisted_3$l, vue.toDisplayString(_ctx.title), 1)) : vue.createCommentVNode("", true),
+                      _ctx.title ? (vue.openBlock(), vue.createElementBlock("strong", _hoisted_3$m, vue.toDisplayString(_ctx.title), 1)) : vue.createCommentVNode("", true),
                       vue.createElementVNode("div", _hoisted_4$g, [
                         _ctx.message ? (vue.openBlock(), vue.createElementBlock("div", {
                           key: 0,
@@ -5634,7 +5634,7 @@ var __async = (__this, __arguments, generator) => {
   });
   const _hoisted_1$s = ["value", "name"];
   const _hoisted_2$n = ["title"];
-  const _hoisted_3$k = ["textContent"];
+  const _hoisted_3$l = ["textContent"];
   const _hoisted_4$f = {
     key: 1,
     class: "placeholder"
@@ -5677,7 +5677,7 @@ var __async = (__this, __arguments, generator) => {
           ((_b = _ctx.displayedModelValue) == null ? void 0 : _b.name) || !_ctx.placeholder ? (vue.openBlock(), vue.createElementBlock("span", {
             key: 0,
             textContent: vue.toDisplayString(((_c = _ctx.displayedModelValue) == null ? void 0 : _c.name) || _ctx.firstSiteName)
-          }, null, 8, _hoisted_3$k)) : vue.createCommentVNode("", true),
+          }, null, 8, _hoisted_3$l)) : vue.createCommentVNode("", true),
           !((_d = _ctx.displayedModelValue) == null ? void 0 : _d.name) && _ctx.placeholder ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_4$f, vue.toDisplayString(_ctx.placeholder), 1)) : vue.createCommentVNode("", true)
         ]),
         vue.createElementVNode("span", {
@@ -6398,7 +6398,7 @@ var __async = (__this, __arguments, generator) => {
     class: "quickAccessInside"
   };
   const _hoisted_2$m = { class: "mtm-searchInput" };
-  const _hoisted_3$j = ["title", "placeholder"];
+  const _hoisted_3$k = ["title", "placeholder"];
   const _hoisted_4$e = { class: "dropdown quickAccessDropdown" };
   const _hoisted_5$d = { class: "no-result" };
   const _hoisted_6$9 = ["onClick"];
@@ -6427,7 +6427,7 @@ var __async = (__this, __arguments, generator) => {
           title: _ctx.quickAccessTitle,
           placeholder: _ctx.translate("General_Search"),
           ref: "input"
-        }, null, 40, _hoisted_3$j), [
+        }, null, 40, _hoisted_3$k), [
           [vue.vModelText, _ctx.searchTerm],
           [_directive_focus_if, { focused: _ctx.searchActive }],
           [_directive_tooltips]
@@ -6542,6 +6542,7 @@ var __async = (__this, __arguments, generator) => {
   });
   const _hoisted_1$q = { class: "mtm-searchInput" };
   const _hoisted_2$l = ["value", "placeholder"];
+  const _hoisted_3$j = ["title", "aria-label"];
   function _sfc_render$s(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$q, [
       _cache[2] || (_cache[2] = vue.createElementVNode("span", { class: "mtm-searchInput__icon" }, [
@@ -6559,8 +6560,10 @@ var __async = (__this, __arguments, generator) => {
         key: 0,
         type: "button",
         class: "mtm-searchInput__clear",
+        title: _ctx.translate("General_Clear"),
+        "aria-label": _ctx.translate("General_Clear"),
         onClick: _cache[1] || (_cache[1] = ($event) => _ctx.onClear())
-      })) : vue.createCommentVNode("", true)
+      }, null, 8, _hoisted_3$j)) : vue.createCommentVNode("", true)
     ]);
   }
   const SearchInput = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$s]]);
@@ -9259,6 +9262,12 @@ var __async = (__this, __arguments, generator) => {
       enriched: Boolean,
       // Keeps the plain heading metrics of a report that is not shown in a card.
       plainTitle: Boolean,
+      // A titleless widgetized embed still mounts the header as an actions anchor, so only the
+      // heading is suppressed, not the whole component.
+      showTitle: {
+        type: Boolean,
+        default: true
+      },
       // Left empty on purpose: EnrichedHeadline then names the rated feature after the rendered
       // title, i.e. the widget name. Only dataTable.js sets it, to follow a related report.
       featureName: {
@@ -9324,6 +9333,11 @@ var __async = (__this, __arguments, generator) => {
         const c = this.controls;
         return c.minimise || c.maximise || c.refresh || c.close;
       },
+      // No title and no controls to render. Actions are always empty today; a later story that adds
+      // them must widen this so the full header comes back.
+      isEmpty() {
+        return !this.showTitle && !this.hasControls;
+      },
       isFullPage() {
         return this.context === "fullPage";
       },
@@ -9384,11 +9398,11 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_1$f = { class: "reportHeader__main" };
   const _hoisted_2$a = { key: 1 };
   const _hoisted_3$a = {
-    key: 0,
+    key: 1,
     class: "u-visuallyHidden"
   };
   const _hoisted_4$7 = {
-    key: 1,
+    key: 2,
     class: "reportHeader__search"
   };
   const _hoisted_5$7 = { class: "reportHeader__widgetControls" };
@@ -9396,14 +9410,16 @@ var __async = (__this, __arguments, generator) => {
     const _component_EnrichedHeadline = vue.resolveComponent("EnrichedHeadline");
     const _component_SearchInput = vue.resolveComponent("SearchInput");
     const _component_WidgetControls = vue.resolveComponent("WidgetControls");
-    return vue.openBlock(), vue.createElementBlock("div", {
+    return !_ctx.isEmpty ? (vue.openBlock(), vue.createElementBlock("div", {
+      key: 0,
       class: vue.normalizeClass(["reportHeader", {
         "reportHeader--flush": _ctx.isFullPage && !_ctx.plainTitle,
         "reportHeader--plainTitle": _ctx.plainTitle
       }])
     }, [
       vue.createElementVNode("div", _hoisted_1$f, [
-        (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.titleTag), {
+        _ctx.showTitle ? (vue.openBlock(), vue.createBlock(vue.resolveDynamicComponent(_ctx.titleTag), {
+          key: 0,
           class: vue.normalizeClass(["reportHeader__title widgetName", { "reportHeader__title--clickable": _ctx.titleClickable }]),
           role: _ctx.titleClickable ? "button" : void 0,
           tabindex: _ctx.titleClickable ? 0 : void 0,
@@ -9430,7 +9446,7 @@ var __async = (__this, __arguments, generator) => {
             }, 8, ["feature-name", "inline-help", "report-generated", "edit-url", "help-url"])) : (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$a, vue.toDisplayString(_ctx.titleText), 1))
           ]),
           _: 1
-        }, 40, ["class", "role", "tabindex", "title", "onClick", "onKeydown"])),
+        }, 40, ["class", "role", "tabindex", "title", "onClick", "onKeydown"])) : vue.createCommentVNode("", true),
         !_ctx.isFullPage ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$a, vue.toDisplayString(_ctx.translate("General_Widget")), 1)) : vue.createCommentVNode("", true),
         _ctx.canSearch ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$7, [
           vue.createVNode(_component_SearchInput, {
@@ -9455,7 +9471,7 @@ var __async = (__this, __arguments, generator) => {
         }, null, 8, ["can-minimise", "can-maximise", "can-refresh", "can-close"])) : vue.createCommentVNode("", true)
       ]),
       _cache[4] || (_cache[4] = vue.createElementVNode("div", { class: "reportHeader__actions" }, null, -1))
-    ], 2);
+    ], 2)) : vue.createCommentVNode("", true);
   }
   const ReportHeader = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$h]]);
   /*!
@@ -11206,8 +11222,7 @@ var __async = (__this, __arguments, generator) => {
           );
         }
         const colors = JSON.stringify(sparklineColors);
-        const redesignEnabled = document.body.classList.contains("sparklines-redesign-enabled");
-        const sizeParams = redesignEnabled ? __spreadValues(__spreadValues({}, typeof this.width === "number" ? { width: this.width * 2 } : {}), typeof this.height === "number" ? { height: this.height * 2 } : {}) : {};
+        const sizeParams = __spreadValues(__spreadValues({}, typeof this.width === "number" ? { width: this.width * 2 } : {}), typeof this.height === "number" ? { height: this.height * 2 } : {});
         const defaultParams = __spreadProps(__spreadValues({
           forceView: "1",
           viewDataTable: "sparkline",
