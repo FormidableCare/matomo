@@ -9281,11 +9281,9 @@ var __async = (__this, __arguments, generator) => {
         type: String,
         default: ""
       },
-      // Renders the report search input under the title. dataTable.js drives this from the
-      // report's `show_search` config.
+      // Shows the search input; dataTable.js drives it from the report's `show_search` config.
       showSearch: Boolean,
-      // The current server-side search pattern, pushed back after each reload so the field stays
-      // in sync (prefill on load, related-report switch, programmatic clear).
+      // Current server-side pattern, pushed back after each reload to keep the field in sync.
       searchQuery: {
         type: String,
         default: ""
@@ -9303,14 +9301,16 @@ var __async = (__this, __arguments, generator) => {
     emits: ["minimise", "maximise", "refresh", "close", "titleClick", "search"],
     data() {
       return {
-        // Local mirror of the search field. Seeded from `searchQuery`; user input schedules a
-        // debounced search, a `searchQuery` change syncs it back without re-triggering one.
+        // Local mirror of the field, seeded from `searchQuery`.
         query: this.searchQuery,
         searchDebounceTimer: null
       };
     },
     watch: {
       searchQuery(value) {
+        if (this.searchDebounceTimer) {
+          return;
+        }
         if (value !== this.query) {
           this.query = value;
         }
@@ -9326,6 +9326,10 @@ var __async = (__this, __arguments, generator) => {
       },
       isFullPage() {
         return this.context === "fullPage";
+      },
+      // Search is offered on real reports, but never in the widget preview (a static thumbnail).
+      canSearch() {
+        return this.showSearch && this.context !== "preview";
       },
       titleText() {
         return this.reportTitle || this.title;
@@ -9357,17 +9361,17 @@ var __async = (__this, __arguments, generator) => {
           this.searchDebounceTimer = null;
         }
         if (!value) {
-          this.dispatchSearch();
+          this.dispatchSearch(value);
           return;
         }
-        this.searchDebounceTimer = setTimeout(() => this.dispatchSearch(), SEARCH_DEBOUNCE_MS);
+        this.searchDebounceTimer = setTimeout(() => this.dispatchSearch(value), SEARCH_DEBOUNCE_MS);
       },
-      dispatchSearch() {
+      dispatchSearch(keyword) {
         this.searchDebounceTimer = null;
-        this.$emit("search", { keyword: this.query });
+        this.$emit("search", { keyword });
         this.$el.dispatchEvent(new CustomEvent("reportheader:search", {
           bubbles: true,
-          detail: { keyword: this.query }
+          detail: { keyword }
         }));
       }
     },
@@ -9428,7 +9432,7 @@ var __async = (__this, __arguments, generator) => {
           _: 1
         }, 40, ["class", "role", "tabindex", "title", "onClick", "onKeydown"])),
         !_ctx.isFullPage ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$a, vue.toDisplayString(_ctx.translate("General_Widget")), 1)) : vue.createCommentVNode("", true),
-        _ctx.showSearch ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$7, [
+        _ctx.canSearch ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$7, [
           vue.createVNode(_component_SearchInput, {
             "model-value": _ctx.query,
             placeholder: _ctx.searchPlaceholder,
@@ -11552,6 +11556,8 @@ var __async = (__this, __arguments, generator) => {
       showPeriods: Boolean,
       showFooter: Boolean,
       showFooterIcons: Boolean,
+      // Not used in this component: dataTable.js reads it to decide whether the ReportHeader shows
+      // a search input for this report.
       showSearch: Boolean,
       showFlattenTable: Boolean,
       reportSupportsFlatten: Boolean,
