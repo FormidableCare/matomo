@@ -12262,9 +12262,17 @@ var __async = (__this, __arguments, generator) => {
     let intervalId;
     let lastValue = el.value;
     const clearValue = () => {
+      if (el.value === "") {
+        return;
+      }
       el.value = "";
       el.dispatchEvent(new Event("input"));
       el.dispatchEvent(new Event("change"));
+      lastValue = "";
+      if (timeoutId !== void 0) {
+        clearTimeout(timeoutId);
+        timeoutId = void 0;
+      }
     };
     const resetTimer = () => {
       if (timeoutId) clearTimeout(timeoutId);
