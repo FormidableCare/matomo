@@ -5692,7 +5692,7 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_5$d = { class: "piwikSelector__dropdown" };
   const _hoisted_6$a = { class: "mtm-dropdownPanel mtm-dropdownPanel--wide" };
   const _hoisted_7$7 = { class: "mtm-dropdownPanel__search" };
-  const _hoisted_8$7 = { class: "mtm-dropdownPanel__menu mtm-dropdownPanel__menu--scrollable" };
+  const _hoisted_8$7 = { class: "mtm-dropdownPanel__menu mtm-dropdownPanel__menu--scrollable mtm-dropdownPanel__menu--gutter" };
   const _hoisted_9$6 = ["href"];
   const _hoisted_10$5 = ["innerHTML"];
   const _hoisted_11$5 = ["onClick"];
