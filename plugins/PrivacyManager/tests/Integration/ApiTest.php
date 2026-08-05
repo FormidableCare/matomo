@@ -156,19 +156,8 @@ class ApiTest extends IntegrationTestCase
         $this->assertFalse(IpAddressMaskLength::isCompliant(CnilPolicy::class, $this->siteId));
     }
 
-    public function testGetCompliancePolicySettingsThrowsWhenFeatureIsNotEnabled(): void
-    {
-        $this->disableGranularComplianceFeature();
-
-        $this->expectExceptionMessage('Granular compliance configuration is not enabled');
-
-        $this->api->getCompliancePolicySettings($this->siteId, 'cnil_v1');
-    }
-
     public function testGetCompliancePolicySettingsThrowsForInvalidPolicy(): void
     {
-        $this->enableGranularComplianceFeature();
-
         $this->expectExceptionMessage('Invalid compliance policy');
 
         $this->api->getCompliancePolicySettings($this->siteId, 'egg');
@@ -176,8 +165,6 @@ class ApiTest extends IntegrationTestCase
 
     public function testGetCompliancePolicySettingsThrowsWithoutSuperUserAccess(): void
     {
-        $this->enableGranularComplianceFeature();
-
         $fakeAccess = StaticContainer::getContainer()->get(Access::class);
         $fakeAccess->setSuperUserAccess(false);
 
@@ -188,8 +175,6 @@ class ApiTest extends IntegrationTestCase
 
     public function testGetCompliancePolicySettingsReturnsAllSettingsWithDefaultState(): void
     {
-        $this->enableGranularComplianceFeature();
-
         // IP anonymisation is enabled by default, disable it to get a deterministic non-compliant setting
         $this->api->setAnonymizeIpSettings(false, 2, true);
 
@@ -235,8 +220,6 @@ class ApiTest extends IntegrationTestCase
         $this->api->setAnonymizeIpSettings(false, 2, true);
         $this->api->setComplianceStatus((string) $this->siteId, 'cnil_v1', true);
 
-        $this->enableGranularComplianceFeature();
-
         $payload = $this->api->getCompliancePolicySettings($this->siteId, 'cnil_v1');
         $this->assertTrue($payload['policyEnforced']);
 
@@ -255,8 +238,6 @@ class ApiTest extends IntegrationTestCase
 
     public function testGetCompliancePolicySettingsStatusIsCompliantWhenUnderlyingSettingSatisfiesRequirement(): void
     {
-        $this->enableGranularComplianceFeature();
-
         $this->api->setAnonymizeIpSettings(true, 2, true);
 
         $payload = $this->api->getCompliancePolicySettings($this->siteId, 'cnil_v1');
@@ -267,37 +248,8 @@ class ApiTest extends IntegrationTestCase
         $this->assertSame('compliant', $settings['PrivacyManager.IpAddressMaskLength']['status']);
     }
 
-    public function testGetCompliancePolicySettingsExternalStatusReflectsRawConfigDespiteEnforcement(): void
-    {
-        $this->enableGranularComplianceFeature();
-
-        // raw non-compliant config for an externally managed setting + enforced policy
-        Config::getInstance()->Tracker = array_merge(
-            Config::getInstance()->Tracker ?: [],
-            ['use_third_party_id_cookie' => 1]
-        );
-        $this->api->setComplianceStatus((string) $this->siteId, 'cnil_v1', true);
-
-        $payload = $this->api->getCompliancePolicySettings($this->siteId, 'cnil_v1');
-        $thirdPartyCookies = $this->getSettingsById($payload)['Core.ThirdPartyCookies'];
-
-        // the policy override must not mask the raw non-compliant config
-        $this->assertSame('non_compliant', $thirdPartyCookies['status']);
-    }
-
-    public function testSetCompliancePolicySettingsThrowsWhenFeatureIsNotEnabled(): void
-    {
-        $this->disableGranularComplianceFeature();
-
-        $this->expectExceptionMessage('Granular compliance configuration is not enabled');
-
-        $this->api->setCompliancePolicySettings($this->siteId, 'cnil_v1', ['PrivacyManager.IPAnonymisation' => 1]);
-    }
-
     public function testSetCompliancePolicySettingsThrowsForUnknownSettingId(): void
     {
-        $this->enableGranularComplianceFeature();
-
         $this->expectExceptionMessage('The setting "PrivacyManager.Egg" is unknown or cannot be toggled');
 
         $this->api->setCompliancePolicySettings($this->siteId, 'cnil_v1', ['PrivacyManager.Egg' => 1]);
@@ -305,8 +257,6 @@ class ApiTest extends IntegrationTestCase
 
     public function testSetCompliancePolicySettingsThrowsForExternallyManagedSetting(): void
     {
-        $this->enableGranularComplianceFeature();
-
         $this->expectExceptionMessage('The setting "Core.ThirdPartyCookies" is unknown or cannot be toggled');
 
         $this->api->setCompliancePolicySettings($this->siteId, 'cnil_v1', ['Core.ThirdPartyCookies' => 1]);
@@ -314,7 +264,6 @@ class ApiTest extends IntegrationTestCase
 
     public function testSetCompliancePolicySettingsThrowsWhenPolicyIsConfigControlled(): void
     {
-        $this->enableGranularComplianceFeature();
         Config::getInstance()->CnilPolicy = ['cnil_v1_policy_enabled' => 1];
 
         $this->expectExceptionMessage('The compliance policy is controlled by the config file and cannot be changed');
@@ -324,8 +273,6 @@ class ApiTest extends IntegrationTestCase
 
     public function testSetCompliancePolicySettingsRequiresPasswordWhenUsingSessionToken(): void
     {
-        $this->enableGranularComplianceFeature();
-
         $this->expectException(Exception::class);
         $this->expectExceptionMessage('UsersManager_ConfirmWithReAuthentication');
 
@@ -344,8 +291,6 @@ class ApiTest extends IntegrationTestCase
 
     public function testSetCompliancePolicySettingsEnforcesAndReleasesIndividualSettings(): void
     {
-        $this->enableGranularComplianceFeature();
-
         // make the underlying setting non-compliant so enforcement is observable
         $this->api->setAnonymizeIpSettings(false, 2, true);
 
@@ -380,8 +325,6 @@ class ApiTest extends IntegrationTestCase
 
     public function testEnforceCompliancePolicySettingsEnforcesAllToggleableSettings(): void
     {
-        $this->enableGranularComplianceFeature();
-
         $payload = $this->api->enforceCompliancePolicySettings($this->siteId, 'cnil_v1');
 
         $this->assertTrue($payload['policyEnforced']);
@@ -398,8 +341,6 @@ class ApiTest extends IntegrationTestCase
 
     public function testSetCompliancePolicySettingsCanDisableSingleSettingAfterPolicyWasEnforced(): void
     {
-        $this->enableGranularComplianceFeature();
-
         $this->api->enforceCompliancePolicySettings($this->siteId, 'cnil_v1');
 
         $payload = $this->api->setCompliancePolicySettings(
@@ -420,8 +361,6 @@ class ApiTest extends IntegrationTestCase
         // enforce via the deprecated whole-policy API first
         $this->api->setComplianceStatus((string) $this->siteId, 'cnil_v1', true);
 
-        $this->enableGranularComplianceFeature();
-
         $payload = $this->api->setCompliancePolicySettings(
             $this->siteId,
             'cnil_v1',
@@ -433,10 +372,24 @@ class ApiTest extends IntegrationTestCase
         $this->assertTrue($settings['PrivacyManager.CampaignParameterValuesMasked']['enforced']);
     }
 
+    public function testGetCompliancePolicySettingsExternalStatusReflectsRawConfigDespiteEnforcement(): void
+    {
+        // raw non-compliant config for an externally managed setting + enforced policy
+        Config::getInstance()->Tracker = array_merge(
+            Config::getInstance()->Tracker ?: [],
+            ['use_third_party_id_cookie' => 1]
+        );
+        $this->api->setComplianceStatus((string) $this->siteId, 'cnil_v1', true);
+
+        $payload = $this->api->getCompliancePolicySettings($this->siteId, 'cnil_v1');
+        $thirdPartyCookies = $this->getSettingsById($payload)['Core.ThirdPartyCookies'];
+
+        // the policy override must not mask the raw non-compliant config
+        $this->assertSame('non_compliant', $thirdPartyCookies['status']);
+    }
+
     public function testSetCompliancePolicySettingsThrowsForUnknownSite(): void
     {
-        $this->enableGranularComplianceFeature();
-
         $this->expectException(\Piwik\Exception\UnexpectedWebsiteFoundException::class);
 
         $this->api->setCompliancePolicySettings(99999, 'cnil_v1', ['PrivacyManager.IPAnonymisation' => 1]);
@@ -444,8 +397,6 @@ class ApiTest extends IntegrationTestCase
 
     public function testSetCompliancePolicySettingsThrowsForGarbageEnforcementValue(): void
     {
-        $this->enableGranularComplianceFeature();
-
         $this->expectExceptionMessage('Invalid enforcement value for the setting "PrivacyManager.IPAnonymisation"');
 
         $this->api->setCompliancePolicySettings($this->siteId, 'cnil_v1', ['PrivacyManager.IPAnonymisation' => 'banana']);
@@ -453,8 +404,6 @@ class ApiTest extends IntegrationTestCase
 
     public function testDisablingWholePolicyAlignsStoredRowsOfUndiscoverableSettings(): void
     {
-        $this->enableGranularComplianceFeature();
-
         // simulate a per-setting row left behind by a currently deactivated plugin
         Db::query(
             'INSERT INTO ' . Common::prefixTable('plugin_setting')
@@ -470,16 +419,6 @@ class ApiTest extends IntegrationTestCase
             . " WHERE plugin_name = 'CnilPolicy' AND setting_name = 'cnil_v1_enforce__SomePremiumPlugin_DisabledFeature'"
         );
         $this->assertSame('0', $value);
-    }
-
-    private function enableGranularComplianceFeature(): void
-    {
-        Config::getInstance()->FeatureFlags = ['GranularPrivacyCompliance_feature' => 'enabled'];
-    }
-
-    private function disableGranularComplianceFeature(): void
-    {
-        Config::getInstance()->FeatureFlags = ['GranularPrivacyCompliance_feature' => 'disabled'];
     }
 
     /**
