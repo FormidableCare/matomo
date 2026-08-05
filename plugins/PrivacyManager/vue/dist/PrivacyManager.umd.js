@@ -42,7 +42,7 @@ var __async = (__this, __arguments, generator) => {
   });
 };
 
-  const _sfc_main$h = vue.defineComponent({
+  const _sfc_main$j = vue.defineComponent({
     components: {
       ContentBlock: CoreHome.ContentBlock,
       SiteSelector: CoreHome.SiteSelector,
@@ -271,27 +271,27 @@ var __async = (__this, __arguments, generator) => {
     }
     return target;
   };
-  const _hoisted_1$g = { class: "manageGdpr" };
-  const _hoisted_2$f = { class: "intro" };
-  const _hoisted_3$e = ["innerHTML"];
-  const _hoisted_4$d = { class: "form-group row" };
-  const _hoisted_5$b = { class: "col s12 input-field" };
-  const _hoisted_6$9 = {
+  const _hoisted_1$i = { class: "manageGdpr" };
+  const _hoisted_2$h = { class: "intro" };
+  const _hoisted_3$g = ["innerHTML"];
+  const _hoisted_4$f = { class: "form-group row" };
+  const _hoisted_5$d = { class: "col s12 input-field" };
+  const _hoisted_6$b = {
     for: "gdprsite",
     class: "siteSelectorLabel"
   };
-  const _hoisted_7$8 = { class: "sites_autocomplete" };
-  const _hoisted_8$6 = {
+  const _hoisted_7$a = { class: "sites_autocomplete" };
+  const _hoisted_8$8 = {
     key: 0,
     class: "form-group row segmentFilterGroup"
   };
-  const _hoisted_9$6 = { class: "col s12" };
-  const _hoisted_10$6 = { style: { "margin": "8px 0", "display": "inline-block" } };
-  const _hoisted_11$5 = {
+  const _hoisted_9$7 = { class: "col s12" };
+  const _hoisted_10$7 = { style: { "margin": "8px 0", "display": "inline-block" } };
+  const _hoisted_11$6 = {
     key: 2,
     class: "dataUnavailable system notification notification-icon notification-info"
   };
-  const _hoisted_12$5 = ["innerHTML"];
+  const _hoisted_12$6 = ["innerHTML"];
   const _hoisted_13$3 = {
     key: 0,
     class: "system notification notification-icon notification-info"
@@ -326,19 +326,19 @@ var __async = (__this, __arguments, generator) => {
   };
   const _hoisted_38 = ["value"];
   const _hoisted_39 = ["value"];
-  function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$j(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_SiteSelector = vue.resolveComponent("SiteSelector");
     const _component_SegmentGenerator = vue.resolveComponent("SegmentGenerator");
     const _component_SaveButton = vue.resolveComponent("SaveButton");
     const _component_ContentBlock = vue.resolveComponent("ContentBlock");
     const _component_Field = vue.resolveComponent("Field");
     const _directive_content_table = vue.resolveDirective("content-table");
-    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$g, [
+    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$i, [
       vue.createVNode(_component_ContentBlock, {
         "content-title": _ctx.translate("PrivacyManager_GdprTools")
       }, {
         default: vue.withCtx(() => [
-          vue.createElementVNode("div", _hoisted_2$f, [
+          vue.createElementVNode("div", _hoisted_2$h, [
             vue.createElementVNode("p", null, [
               vue.createTextVNode(vue.toDisplayString(_ctx.translate("PrivacyManager_GdprToolsPageIntro1")) + " ", 1),
               _cache[7] || (_cache[7] = vue.createElementVNode("br", null, null, -1)),
@@ -354,15 +354,15 @@ var __async = (__this, __arguments, generator) => {
               _cache[10] || (_cache[10] = vue.createElementVNode("br", null, null, -1)),
               vue.createElementVNode("span", {
                 innerHTML: _ctx.$sanitize(_ctx.overviewHintText)
-              }, null, 8, _hoisted_3$e)
+              }, null, 8, _hoisted_3$g)
             ])
           ]),
           vue.createElementVNode("h3", null, vue.toDisplayString(_ctx.translate("PrivacyManager_SearchForDataSubject")), 1),
-          vue.createElementVNode("div", _hoisted_4$d, [
-            vue.createElementVNode("div", _hoisted_5$b, [
+          vue.createElementVNode("div", _hoisted_4$f, [
+            vue.createElementVNode("div", _hoisted_5$d, [
               vue.createElementVNode("div", null, [
-                vue.createElementVNode("label", _hoisted_6$9, vue.toDisplayString(_ctx.translate("PrivacyManager_SelectWebsite")), 1),
-                vue.createElementVNode("div", _hoisted_7$8, [
+                vue.createElementVNode("label", _hoisted_6$b, vue.toDisplayString(_ctx.translate("PrivacyManager_SelectWebsite")), 1),
+                vue.createElementVNode("div", _hoisted_7$a, [
                   vue.createVNode(_component_SiteSelector, {
                     id: "gdprsite",
                     modelValue: _ctx.site,
@@ -378,10 +378,10 @@ var __async = (__this, __arguments, generator) => {
               ])
             ])
           ]),
-          _ctx.isVisitorLogAndProfileEnabled ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_8$6, [
-            vue.createElementVNode("div", _hoisted_9$6, [
+          _ctx.isVisitorLogAndProfileEnabled ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_8$8, [
+            vue.createElementVNode("div", _hoisted_9$7, [
               vue.createElementVNode("div", null, [
-                vue.createElementVNode("label", _hoisted_10$6, vue.toDisplayString(_ctx.translate("PrivacyManager_FindDataSubjectsBy")), 1),
+                vue.createElementVNode("label", _hoisted_10$7, vue.toDisplayString(_ctx.translate("PrivacyManager_FindDataSubjectsBy")), 1),
                 vue.createElementVNode("div", null, [
                   vue.createVNode(_component_SegmentGenerator, {
                     modelValue: _ctx.segment_filter,
@@ -401,12 +401,12 @@ var __async = (__this, __arguments, generator) => {
             onConfirm: _cache[3] || (_cache[3] = ($event) => _ctx.findDataSubjects()),
             disabled: !_ctx.segment_filter,
             saving: _ctx.isLoading
-          }, null, 8, ["value", "disabled", "saving"])) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_11$5, [
+          }, null, 8, ["value", "disabled", "saving"])) : (vue.openBlock(), vue.createElementBlock("div", _hoisted_11$6, [
             vue.createElementVNode("strong", null, vue.toDisplayString(_ctx.translate("PrivacyManager_SiteDataNotAvailable")), 1),
             vue.createElementVNode("p", null, vue.toDisplayString(_ctx.translate("PrivacyManager_VisitorLogsProfilesDisabledMessage")), 1),
             vue.createElementVNode("p", {
               innerHTML: _ctx.$sanitize(_ctx.siteSettingsTextSingle)
-            }, null, 8, _hoisted_12$5)
+            }, null, 8, _hoisted_12$6)
           ]))
         ]),
         _: 1
@@ -599,13 +599,13 @@ var __async = (__this, __arguments, generator) => {
       ], 512)
     ]);
   }
-  const ManageGdpr = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$h]]);
+  const ManageGdpr = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$j]]);
   function boolToInt(value) {
     return value === true || value === 1 || value === "1" ? 1 : 0;
   }
   const SYSTEM_SETTINGS = "system";
   const SITE_SPECIFIC_SETTINGS = "site-specific";
-  const _sfc_main$g = vue.defineComponent({
+  const _sfc_main$i = vue.defineComponent({
     props: {
       ipAnonymizerEnabled: Boolean,
       anonymizeUserId: Boolean,
@@ -811,30 +811,30 @@ var __async = (__this, __arguments, generator) => {
       }
     }
   });
-  const _hoisted_1$f = { class: "anonymizeSettings" };
-  const _hoisted_2$e = { class: "anonymizeIpSettingsField" };
-  const _hoisted_3$d = { class: "maskLengthField" };
-  const _hoisted_4$c = { class: "useAnonymizedIpForVisitEnrichmentField" };
-  const _hoisted_5$a = { class: "anonymizeUserIdField" };
-  const _hoisted_6$8 = { class: "anonymizeOrderIdField" };
-  const _hoisted_7$7 = {
+  const _hoisted_1$h = { class: "anonymizeSettings" };
+  const _hoisted_2$g = { class: "anonymizeIpSettingsField" };
+  const _hoisted_3$f = { class: "maskLengthField" };
+  const _hoisted_4$e = { class: "useAnonymizedIpForVisitEnrichmentField" };
+  const _hoisted_5$c = { class: "anonymizeUserIdField" };
+  const _hoisted_6$a = { class: "anonymizeOrderIdField" };
+  const _hoisted_7$9 = {
     key: 0,
     class: "forceCookielessTrackingField"
   };
-  const _hoisted_8$5 = { key: 0 };
-  const _hoisted_9$5 = { class: "alert-warning alert" };
-  const _hoisted_10$5 = { class: "anonymizeReferrerField" };
-  const _hoisted_11$4 = { class: "randomizeConfigIdField" };
-  const _hoisted_12$4 = {
+  const _hoisted_8$7 = { key: 0 };
+  const _hoisted_9$6 = { class: "alert-warning alert" };
+  const _hoisted_10$6 = { class: "anonymizeReferrerField" };
+  const _hoisted_11$5 = { class: "randomizeConfigIdField" };
+  const _hoisted_12$5 = {
     key: 2,
     class: "footer-buttons"
   };
-  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_Field = vue.resolveComponent("Field");
     const _component_SaveButton = vue.resolveComponent("SaveButton");
     const _component_PasswordConfirmation = vue.resolveComponent("PasswordConfirmation");
     const _directive_form = vue.resolveDirective("form");
-    return vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", _hoisted_1$f, [
+    return vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", _hoisted_1$h, [
       _ctx.idSiteSpecific ? (vue.openBlock(), vue.createBlock(_component_Field, {
         key: 0,
         uicontrol: "radio",
@@ -846,7 +846,7 @@ var __async = (__this, __arguments, generator) => {
         "inline-help": _ctx.useSiteSpecificSettingsHelpText
       }, null, 8, ["name", "title", "modelValue", "options", "inline-help"])) : vue.createCommentVNode("", true),
       _ctx.showSettings ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
-        vue.createElementVNode("div", _hoisted_2$e, [
+        vue.createElementVNode("div", _hoisted_2$g, [
           vue.createVNode(_component_Field, {
             uicontrol: "checkbox",
             name: `anonymizeIpSettings${_ctx.idSiteSpecific}`,
@@ -858,7 +858,7 @@ var __async = (__this, __arguments, generator) => {
           }, null, 8, ["name", "title", "modelValue", "inline-help", "extra-metadata"])
         ]),
         vue.withDirectives(vue.createElementVNode("div", null, [
-          vue.createElementVNode("div", _hoisted_3$d, [
+          vue.createElementVNode("div", _hoisted_3$f, [
             vue.createVNode(_component_Field, {
               uicontrol: "radio",
               name: `maskLength${_ctx.idSiteSpecific}`,
@@ -870,7 +870,7 @@ var __async = (__this, __arguments, generator) => {
               "extra-metadata": _ctx.getExtraMetadataForField("ipAddressMaskLength")
             }, null, 8, ["name", "title", "modelValue", "options", "inline-help", "extra-metadata"])
           ]),
-          vue.createElementVNode("div", _hoisted_4$c, [
+          vue.createElementVNode("div", _hoisted_4$e, [
             vue.createVNode(_component_Field, {
               uicontrol: "radio",
               name: `useAnonymizedIpForVisitEnrichment${_ctx.idSiteSpecific}`,
@@ -885,7 +885,7 @@ var __async = (__this, __arguments, generator) => {
         ], 512), [
           [vue.vShow, _ctx.actualEnabled]
         ]),
-        vue.createElementVNode("div", _hoisted_5$a, [
+        vue.createElementVNode("div", _hoisted_5$c, [
           vue.createVNode(_component_Field, {
             uicontrol: "checkbox",
             name: `anonymizeUserId${_ctx.idSiteSpecific}`,
@@ -903,7 +903,7 @@ var __async = (__this, __arguments, generator) => {
             _: 1
           }, 8, ["name", "title", "modelValue", "extra-metadata"])
         ]),
-        vue.createElementVNode("div", _hoisted_6$8, [
+        vue.createElementVNode("div", _hoisted_6$a, [
           vue.createVNode(_component_Field, {
             uicontrol: "checkbox",
             name: `anonymizeOrderId${_ctx.idSiteSpecific}`,
@@ -914,7 +914,7 @@ var __async = (__this, __arguments, generator) => {
             "extra-metadata": _ctx.getExtraMetadataForField("anonymizeOrderId")
           }, null, 8, ["name", "title", "modelValue", "inline-help", "extra-metadata"])
         ]),
-        !_ctx.idSiteSpecific ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_7$7, [
+        !_ctx.idSiteSpecific ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_7$9, [
           vue.createVNode(_component_Field, {
             uicontrol: "checkbox",
             name: "forceCookielessTracking",
@@ -928,10 +928,10 @@ var __async = (__this, __arguments, generator) => {
               _cache[15] || (_cache[15] = vue.createElementVNode("br", null, null, -1)),
               _cache[16] || (_cache[16] = vue.createElementVNode("br", null, null, -1)),
               vue.createElementVNode("em", null, vue.toDisplayString(_ctx.translate("PrivacyManager_ForceCookielessTrackingDescription2")), 1),
-              !_ctx.trackerWritable ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_8$5, [
+              !_ctx.trackerWritable ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_8$7, [
                 _cache[13] || (_cache[13] = vue.createElementVNode("br", null, null, -1)),
                 _cache[14] || (_cache[14] = vue.createElementVNode("br", null, null, -1)),
-                vue.createElementVNode("p", _hoisted_9$5, vue.toDisplayString(_ctx.translate(
+                vue.createElementVNode("p", _hoisted_9$6, vue.toDisplayString(_ctx.translate(
                   "PrivacyManager_ForceCookielessTrackingDescriptionNotWritable",
                   _ctx.trackerFileName
                 )), 1)
@@ -940,7 +940,7 @@ var __async = (__this, __arguments, generator) => {
             _: 1
           }, 8, ["title", "modelValue", "extra-metadata"])
         ])) : vue.createCommentVNode("", true),
-        vue.createElementVNode("div", _hoisted_10$5, [
+        vue.createElementVNode("div", _hoisted_10$6, [
           vue.createVNode(_component_Field, {
             uicontrol: "select",
             name: `anonymizeReferrer${_ctx.idSiteSpecific}`,
@@ -952,7 +952,7 @@ var __async = (__this, __arguments, generator) => {
             "extra-metadata": _ctx.getExtraMetadataForField("anonymizeReferrer")
           }, null, 8, ["name", "title", "modelValue", "options", "inline-help", "extra-metadata"])
         ]),
-        vue.createElementVNode("div", _hoisted_11$4, [
+        vue.createElementVNode("div", _hoisted_11$5, [
           vue.createVNode(_component_Field, {
             uicontrol: "checkbox",
             name: `randomizeConfigId${_ctx.idSiteSpecific}`,
@@ -964,7 +964,7 @@ var __async = (__this, __arguments, generator) => {
           }, null, 8, ["name", "title", "modelValue", "inline-help", "extra-metadata"])
         ])
       ], 64)) : vue.createCommentVNode("", true),
-      !_ctx.idSiteSpecific ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_12$4, [
+      !_ctx.idSiteSpecific ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_12$5, [
         vue.createVNode(_component_SaveButton, {
           onConfirm: _cache[9] || (_cache[9] = ($event) => _ctx.shouldSave()),
           saving: _ctx.isLoading
@@ -986,7 +986,7 @@ var __async = (__this, __arguments, generator) => {
       [_directive_form]
     ]);
   }
-  const AnonymizeIp = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$g]]);
+  const AnonymizeIp = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$i]]);
   function nearlyWhite(hex) {
     const bigint = parseInt(hex, 16);
     const r = bigint >> 16 & 255;
@@ -995,7 +995,7 @@ var __async = (__this, __arguments, generator) => {
     return r >= 225 && g >= 225 && b >= 225;
   }
   const { $: $$1 } = window;
-  const _sfc_main$f = vue.defineComponent({
+  const _sfc_main$h = vue.defineComponent({
     props: {
       currentLanguageCode: {
         type: String,
@@ -1144,21 +1144,21 @@ var __async = (__this, __arguments, generator) => {
       }
     }
   });
-  const _hoisted_1$e = { class: "optOutCustomizer" };
-  const _hoisted_2$d = ["innerHTML"];
-  const _hoisted_3$c = {
+  const _hoisted_1$g = { class: "optOutCustomizer" };
+  const _hoisted_2$f = ["innerHTML"];
+  const _hoisted_3$e = {
     key: 0,
     id: "opt-out-styling"
   };
-  const _hoisted_4$b = ["value"];
-  const _hoisted_5$9 = ["value"];
-  const _hoisted_6$7 = ["value"];
-  const _hoisted_7$6 = ["value"];
-  const _hoisted_8$4 = ["value"];
-  const _hoisted_9$4 = ["src"];
-  const _hoisted_10$4 = { class: "form-group row" };
-  const _hoisted_11$3 = { class: "col s12 m6" };
-  const _hoisted_12$3 = { for: "codeType1" };
+  const _hoisted_4$d = ["value"];
+  const _hoisted_5$b = ["value"];
+  const _hoisted_6$9 = ["value"];
+  const _hoisted_7$8 = ["value"];
+  const _hoisted_8$6 = ["value"];
+  const _hoisted_9$5 = ["src"];
+  const _hoisted_10$5 = { class: "form-group row" };
+  const _hoisted_11$4 = { class: "col s12 m6" };
+  const _hoisted_12$4 = { for: "codeType1" };
   const _hoisted_13$2 = { for: "codeType2" };
   const _hoisted_14$2 = { key: 0 };
   const _hoisted_15$2 = { class: "col s12 m6" };
@@ -1167,14 +1167,14 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_18$2 = ["innerHTML"];
   const _hoisted_19$1 = { class: "system notification notification-info optOutTestReminder" };
   const _hoisted_20$1 = ["innerHTML"];
-  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_Field = vue.resolveComponent("Field");
     const _directive_copy_to_clipboard = vue.resolveDirective("copy-to-clipboard");
     return vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
-      vue.createElementVNode("div", _hoisted_1$e, [
+      vue.createElementVNode("div", _hoisted_1$g, [
         vue.createElementVNode("p", {
           innerHTML: _ctx.$sanitize(_ctx.usersOptOutIntro)
-        }, null, 8, _hoisted_2$d),
+        }, null, 8, _hoisted_2$f),
         vue.createElementVNode("h3", null, vue.toDisplayString(_ctx.translate("PrivacyManager_OptOutAppearance")), 1),
         vue.createElementVNode("div", null, [
           vue.createElementVNode("span", null, [
@@ -1193,7 +1193,7 @@ var __async = (__this, __arguments, generator) => {
             ])
           ])
         ]),
-        _ctx.applyStyling ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$c, [
+        _ctx.applyStyling ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$e, [
           vue.createElementVNode("p", null, [
             vue.createElementVNode("span", null, [
               vue.createTextVNode(vue.toDisplayString(_ctx.translate("PrivacyManager_FontColor")) + ": ", 1),
@@ -1202,7 +1202,7 @@ var __async = (__this, __arguments, generator) => {
                 value: _ctx.fontColor,
                 onKeydown: _cache[3] || (_cache[3] = ($event) => _ctx.onFontColorChange($event)),
                 onChange: _cache[4] || (_cache[4] = ($event) => _ctx.onFontColorChange($event))
-              }, null, 40, _hoisted_4$b)
+              }, null, 40, _hoisted_4$d)
             ]),
             vue.createElementVNode("span", null, [
               vue.createTextVNode(vue.toDisplayString(_ctx.translate("PrivacyManager_BackgroundColor")) + ": ", 1),
@@ -1211,7 +1211,7 @@ var __async = (__this, __arguments, generator) => {
                 value: _ctx.backgroundColor,
                 onKeydown: _cache[5] || (_cache[5] = ($event) => _ctx.onBgColorChange($event)),
                 onChange: _cache[6] || (_cache[6] = ($event) => _ctx.onBgColorChange($event))
-              }, null, 40, _hoisted_5$9)
+              }, null, 40, _hoisted_5$b)
             ]),
             vue.createElementVNode("span", null, [
               vue.createTextVNode(vue.toDisplayString(_ctx.translate("PrivacyManager_FontSize")) + ": ", 1),
@@ -1223,7 +1223,7 @@ var __async = (__this, __arguments, generator) => {
                 value: _ctx.fontSize,
                 onKeydown: _cache[7] || (_cache[7] = ($event) => _ctx.onFontSizeChange($event)),
                 onChange: _cache[8] || (_cache[8] = ($event) => _ctx.onFontSizeChange($event))
-              }, null, 40, _hoisted_6$7)
+              }, null, 40, _hoisted_6$9)
             ]),
             vue.createElementVNode("span", null, [
               vue.createElementVNode("select", {
@@ -1233,7 +1233,7 @@ var __async = (__this, __arguments, generator) => {
                 onChange: _cache[10] || (_cache[10] = ($event) => _ctx.onFontSizeUnitChange($event))
               }, [..._cache[25] || (_cache[25] = [
                 vue.createStaticVNode('<option value="px">px</option><option value="pt">pt</option><option value="em">em</option><option value="rem">rem</option><option value="%">%</option>', 5)
-              ])], 40, _hoisted_7$6)
+              ])], 40, _hoisted_7$8)
             ]),
             vue.createElementVNode("span", null, [
               vue.createTextVNode(vue.toDisplayString(_ctx.translate("PrivacyManager_FontFamily")) + ": ", 1),
@@ -1243,7 +1243,7 @@ var __async = (__this, __arguments, generator) => {
                 value: _ctx.fontFamily,
                 onKeydown: _cache[11] || (_cache[11] = ($event) => _ctx.onFontFamilyChange($event)),
                 onChange: _cache[12] || (_cache[12] = ($event) => _ctx.onFontFamilyChange($event))
-              }, null, 40, _hoisted_8$4)
+              }, null, 40, _hoisted_8$6)
             ])
           ])
         ])) : vue.createCommentVNode("", true),
@@ -1270,14 +1270,14 @@ var __async = (__this, __arguments, generator) => {
           style: { "border": "1px solid #333", "height": "200px", "width": "600px" },
           src: _ctx.iframeUrl,
           class: vue.normalizeClass({ withBg: _ctx.withBg })
-        }, null, 10, _hoisted_9$4)
+        }, null, 10, _hoisted_9$5)
       ]),
       vue.createElementVNode("div", null, [
-        vue.createElementVNode("div", _hoisted_10$4, [
-          vue.createElementVNode("div", _hoisted_11$3, [
+        vue.createElementVNode("div", _hoisted_10$5, [
+          vue.createElementVNode("div", _hoisted_11$4, [
             vue.createElementVNode("h3", null, vue.toDisplayString(_ctx.translate("PrivacyManager_OptOutHtmlCode")), 1),
             vue.createElementVNode("p", null, [
-              vue.createElementVNode("label", _hoisted_12$3, [
+              vue.createElementVNode("label", _hoisted_12$4, [
                 vue.withDirectives(vue.createElementVNode("input", {
                   type: "radio",
                   id: "codeType1",
@@ -1365,14 +1365,14 @@ var __async = (__this, __arguments, generator) => {
       ])
     ], 64);
   }
-  const OptOutCustomizer = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$f]]);
+  const OptOutCustomizer = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$h]]);
   function sub(value) {
     if (value < 10) {
       return `0${value}`;
     }
     return value;
   }
-  const _sfc_main$e = vue.defineComponent({
+  const _sfc_main$g = vue.defineComponent({
     components: {
       PasswordConfirmation: CorePluginsAdmin.PasswordConfirmation,
       SiteSelector: CoreHome.SiteSelector,
@@ -1514,27 +1514,27 @@ var __async = (__this, __arguments, generator) => {
       }
     }
   });
-  const _hoisted_1$d = { class: "anonymizeLogData" };
-  const _hoisted_2$c = { class: "form-group row" };
-  const _hoisted_3$b = { class: "col s12 input-field" };
-  const _hoisted_4$a = {
+  const _hoisted_1$f = { class: "anonymizeLogData" };
+  const _hoisted_2$e = { class: "form-group row" };
+  const _hoisted_3$d = { class: "col s12 input-field" };
+  const _hoisted_4$c = {
     for: "anonymizeSite",
     class: "siteSelectorLabel"
   };
-  const _hoisted_5$8 = { class: "sites_autocomplete" };
-  const _hoisted_6$6 = { class: "form-group row" };
-  const _hoisted_7$5 = { class: "col s6 input-field" };
-  const _hoisted_8$3 = {
+  const _hoisted_5$a = { class: "sites_autocomplete" };
+  const _hoisted_6$8 = { class: "form-group row" };
+  const _hoisted_7$7 = { class: "col s6 input-field" };
+  const _hoisted_8$5 = {
     for: "anonymizeStartDate",
     class: "active"
   };
-  const _hoisted_9$3 = ["value"];
-  const _hoisted_10$3 = { class: "col s6 input-field" };
-  const _hoisted_11$2 = {
+  const _hoisted_9$4 = ["value"];
+  const _hoisted_10$4 = { class: "col s6 input-field" };
+  const _hoisted_11$3 = {
     for: "anonymizeEndDate",
     class: "active"
   };
-  const _hoisted_12$2 = ["value"];
+  const _hoisted_12$3 = ["value"];
   const _hoisted_13$1 = { name: "anonymizeIp" };
   const _hoisted_14$1 = { name: "anonymizeLocation" };
   const _hoisted_15$1 = { name: "anonymizeTheUserId" };
@@ -1562,17 +1562,17 @@ var __async = (__this, __arguments, generator) => {
   const _hoisted_31 = { class: "col s12 m6" };
   const _hoisted_32 = { class: "form-help" };
   const _hoisted_33 = { class: "inline-help" };
-  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_SiteSelector = vue.resolveComponent("SiteSelector");
     const _component_Field = vue.resolveComponent("Field");
     const _component_SaveButton = vue.resolveComponent("SaveButton");
     const _component_PasswordConfirmation = vue.resolveComponent("PasswordConfirmation");
-    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$d, [
-      vue.createElementVNode("div", _hoisted_2$c, [
-        vue.createElementVNode("div", _hoisted_3$b, [
+    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$f, [
+      vue.createElementVNode("div", _hoisted_2$e, [
+        vue.createElementVNode("div", _hoisted_3$d, [
           vue.createElementVNode("div", null, [
-            vue.createElementVNode("label", _hoisted_4$a, vue.toDisplayString(_ctx.translate("PrivacyManager_AnonymizeSites")), 1),
-            vue.createElementVNode("div", _hoisted_5$8, [
+            vue.createElementVNode("label", _hoisted_4$c, vue.toDisplayString(_ctx.translate("PrivacyManager_AnonymizeSites")), 1),
+            vue.createElementVNode("div", _hoisted_5$a, [
               vue.createVNode(_component_SiteSelector, {
                 id: "anonymizeSite",
                 modelValue: _ctx.site,
@@ -1585,10 +1585,10 @@ var __async = (__this, __arguments, generator) => {
           ])
         ])
       ]),
-      vue.createElementVNode("div", _hoisted_6$6, [
-        vue.createElementVNode("div", _hoisted_7$5, [
+      vue.createElementVNode("div", _hoisted_6$8, [
+        vue.createElementVNode("div", _hoisted_7$7, [
           vue.createElementVNode("div", null, [
-            vue.createElementVNode("label", _hoisted_8$3, vue.toDisplayString(_ctx.translate("PrivacyManager_AnonymizeRowDataFrom")), 1),
+            vue.createElementVNode("label", _hoisted_8$5, vue.toDisplayString(_ctx.translate("PrivacyManager_AnonymizeRowDataFrom")), 1),
             vue.createElementVNode("input", {
               type: "text",
               id: "anonymizeStartDate",
@@ -1598,12 +1598,12 @@ var __async = (__this, __arguments, generator) => {
               value: _ctx.startDate,
               onKeydown: _cache[1] || (_cache[1] = ($event) => _ctx.onKeydownStartDate($event)),
               onChange: _cache[2] || (_cache[2] = ($event) => _ctx.onKeydownStartDate($event))
-            }, null, 40, _hoisted_9$3)
+            }, null, 40, _hoisted_9$4)
           ])
         ]),
-        vue.createElementVNode("div", _hoisted_10$3, [
+        vue.createElementVNode("div", _hoisted_10$4, [
           vue.createElementVNode("div", null, [
-            vue.createElementVNode("label", _hoisted_11$2, vue.toDisplayString(_ctx.translate("PrivacyManager_AnonymizeRowDataTo")), 1),
+            vue.createElementVNode("label", _hoisted_11$3, vue.toDisplayString(_ctx.translate("PrivacyManager_AnonymizeRowDataTo")), 1),
             vue.createElementVNode("input", {
               type: "text",
               class: "anonymizeEndDate",
@@ -1613,7 +1613,7 @@ var __async = (__this, __arguments, generator) => {
               value: _ctx.endDate,
               onKeydown: _cache[3] || (_cache[3] = ($event) => _ctx.onKeydownEndDate($event)),
               onChange: _cache[4] || (_cache[4] = ($event) => _ctx.onKeydownEndDate($event))
-            }, null, 40, _hoisted_12$2)
+            }, null, 40, _hoisted_12$3)
           ])
         ])
       ]),
@@ -1753,8 +1753,8 @@ var __async = (__this, __arguments, generator) => {
       }, 8, ["modelValue", "onConfirmed"])
     ]);
   }
-  const AnonymizeLogData = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$e]]);
-  const _sfc_main$d = vue.defineComponent({
+  const AnonymizeLogData = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$g]]);
+  const _sfc_main$f = vue.defineComponent({
     props: {
       dntSupport: Boolean,
       doNotTrackOptions: {
@@ -1799,7 +1799,7 @@ var __async = (__this, __arguments, generator) => {
       }
     }
   });
-  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_Field = vue.resolveComponent("Field");
     const _component_SaveButton = vue.resolveComponent("SaveButton");
     const _directive_form = vue.resolveDirective("form");
@@ -1822,7 +1822,7 @@ var __async = (__this, __arguments, generator) => {
       [_directive_form]
     ]);
   }
-  const DoNotTrackPreference = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$d]]);
+  const DoNotTrackPreference = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$f]]);
   /*!
    * Matomo - free/libre analytics platform
    *
@@ -1918,7 +1918,7 @@ var __async = (__this, __arguments, generator) => {
     }
   }
   const ReportDeletionSettingsStore$1 = new ReportDeletionSettingsStore();
-  const _sfc_main$c = vue.defineComponent({
+  const _sfc_main$e = vue.defineComponent({
     props: {
       isDataPurgeSettingsEnabled: Boolean,
       deleteData: {
@@ -1978,23 +1978,23 @@ var __async = (__this, __arguments, generator) => {
       }
     }
   });
-  const _hoisted_1$c = { id: "formDeleteSettings" };
-  const _hoisted_2$b = { id: "deleteLogSettingEnabled" };
-  const _hoisted_3$a = {
+  const _hoisted_1$e = { id: "formDeleteSettings" };
+  const _hoisted_2$d = { id: "deleteLogSettingEnabled" };
+  const _hoisted_3$c = {
     class: "alert alert-warning deleteOldLogsWarning",
     style: { "width": "50%" }
   };
-  const _hoisted_4$9 = ["href"];
-  const _hoisted_5$7 = { id: "deleteLogSettings" };
-  const _hoisted_6$5 = { key: 0 };
-  const _hoisted_7$4 = { key: 1 };
-  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
+  const _hoisted_4$b = ["href"];
+  const _hoisted_5$9 = { id: "deleteLogSettings" };
+  const _hoisted_6$7 = { key: 0 };
+  const _hoisted_7$6 = { key: 1 };
+  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_Field = vue.resolveComponent("Field");
     const _component_SaveButton = vue.resolveComponent("SaveButton");
     const _component_PasswordConfirmation = vue.resolveComponent("PasswordConfirmation");
     const _directive_form = vue.resolveDirective("form");
-    return vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", _hoisted_1$c, [
-      vue.createElementVNode("div", _hoisted_2$b, [
+    return vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", _hoisted_1$e, [
+      vue.createElementVNode("div", _hoisted_2$d, [
         vue.createElementVNode("div", null, [
           vue.createVNode(_component_Field, {
             uicontrol: "checkbox",
@@ -2008,17 +2008,17 @@ var __async = (__this, __arguments, generator) => {
             "inline-help": _ctx.translate("PrivacyManager_DeleteRawDataInfo")
           }, null, 8, ["model-value", "title", "inline-help"])
         ]),
-        vue.withDirectives(vue.createElementVNode("div", _hoisted_3$a, [
+        vue.withDirectives(vue.createElementVNode("div", _hoisted_3$c, [
           vue.createElementVNode("a", {
             href: _ctx.externalRawLink("https://matomo.org/faq/general/faq_125"),
             rel: "noreferrer noopener",
             target: "_blank"
-          }, vue.toDisplayString(_ctx.translate("General_ClickHere")), 9, _hoisted_4$9)
+          }, vue.toDisplayString(_ctx.translate("General_ClickHere")), 9, _hoisted_4$b)
         ], 512), [
           [vue.vShow, _ctx.enabled]
         ])
       ]),
-      vue.withDirectives(vue.createElementVNode("div", _hoisted_5$7, [
+      vue.withDirectives(vue.createElementVNode("div", _hoisted_5$9, [
         vue.createElementVNode("div", null, [
           vue.createVNode(_component_Field, {
             uicontrol: "text",
@@ -2045,8 +2045,8 @@ var __async = (__this, __arguments, generator) => {
         onConfirmed: _ctx.saveSettings
       }, {
         default: vue.withCtx(() => [
-          _ctx.enabled && !_ctx.enableDeleteReports ? (vue.openBlock(), vue.createElementBlock("h2", _hoisted_6$5, vue.toDisplayString(_ctx.translate("PrivacyManager_DeleteLogsConfirm")), 1)) : vue.createCommentVNode("", true),
-          _ctx.enabled && _ctx.enableDeleteReports ? (vue.openBlock(), vue.createElementBlock("h2", _hoisted_7$4, vue.toDisplayString(_ctx.translate("PrivacyManager_DeleteBothConfirm")), 1)) : vue.createCommentVNode("", true)
+          _ctx.enabled && !_ctx.enableDeleteReports ? (vue.openBlock(), vue.createElementBlock("h2", _hoisted_6$7, vue.toDisplayString(_ctx.translate("PrivacyManager_DeleteLogsConfirm")), 1)) : vue.createCommentVNode("", true),
+          _ctx.enabled && _ctx.enableDeleteReports ? (vue.openBlock(), vue.createElementBlock("h2", _hoisted_7$6, vue.toDisplayString(_ctx.translate("PrivacyManager_DeleteBothConfirm")), 1)) : vue.createCommentVNode("", true)
         ]),
         _: 1
       }, 8, ["modelValue", "onConfirmed"])
@@ -2054,11 +2054,11 @@ var __async = (__this, __arguments, generator) => {
       [_directive_form]
     ]);
   }
-  const DeleteOldLogs = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$c]]);
+  const DeleteOldLogs = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$e]]);
   function getInt(value) {
     return value ? "1" : "0";
   }
-  const _sfc_main$b = vue.defineComponent({
+  const _sfc_main$d = vue.defineComponent({
     props: {
       isDataPurgeSettingsEnabled: Boolean,
       deleteData: {
@@ -2149,22 +2149,22 @@ var __async = (__this, __arguments, generator) => {
       }
     }
   });
-  const _hoisted_1$b = { id: "formDeleteSettings" };
-  const _hoisted_2$a = { id: "deleteReportsSettingEnabled" };
-  const _hoisted_3$9 = {
+  const _hoisted_1$d = { id: "formDeleteSettings" };
+  const _hoisted_2$c = { id: "deleteReportsSettingEnabled" };
+  const _hoisted_3$b = {
     class: "alert alert-warning",
     style: { "width": "50%" }
   };
-  const _hoisted_4$8 = { id: "deleteReportsSettings" };
-  const _hoisted_5$6 = { key: 0 };
-  const _hoisted_6$4 = { key: 1 };
-  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
+  const _hoisted_4$a = { id: "deleteReportsSettings" };
+  const _hoisted_5$8 = { key: 0 };
+  const _hoisted_6$6 = { key: 1 };
+  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_Field = vue.resolveComponent("Field");
     const _component_SaveButton = vue.resolveComponent("SaveButton");
     const _component_PasswordConfirmation = vue.resolveComponent("PasswordConfirmation");
     const _directive_form = vue.resolveDirective("form");
-    return vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", _hoisted_1$b, [
-      vue.createElementVNode("div", _hoisted_2$a, [
+    return vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", _hoisted_1$d, [
+      vue.createElementVNode("div", _hoisted_2$c, [
         vue.createElementVNode("div", null, [
           vue.createVNode(_component_Field, {
             uicontrol: "checkbox",
@@ -2178,7 +2178,7 @@ var __async = (__this, __arguments, generator) => {
             "inline-help": _ctx.translate("PrivacyManager_DeleteAggregateReportsDetailedInfo")
           }, null, 8, ["model-value", "title", "inline-help"])
         ]),
-        vue.withDirectives(vue.createElementVNode("div", _hoisted_3$9, [
+        vue.withDirectives(vue.createElementVNode("div", _hoisted_3$b, [
           vue.createElementVNode("span", null, [
             vue.createTextVNode(vue.toDisplayString(_ctx.translate("PrivacyManager_DeleteReportsInfo2", _ctx.deleteOldLogsText)), 1),
             _cache[11] || (_cache[11] = vue.createElementVNode("br", null, null, -1)),
@@ -2189,7 +2189,7 @@ var __async = (__this, __arguments, generator) => {
           [vue.vShow, _ctx.enabled]
         ])
       ]),
-      vue.withDirectives(vue.createElementVNode("div", _hoisted_4$8, [
+      vue.withDirectives(vue.createElementVNode("div", _hoisted_4$a, [
         vue.createElementVNode("div", null, [
           vue.createVNode(_component_Field, {
             uicontrol: "text",
@@ -2304,8 +2304,8 @@ var __async = (__this, __arguments, generator) => {
         onConfirmed: _ctx.saveSettings
       }, {
         default: vue.withCtx(() => [
-          _ctx.enabled && !_ctx.enableDeleteLogs ? (vue.openBlock(), vue.createElementBlock("h2", _hoisted_5$6, vue.toDisplayString(_ctx.translate("PrivacyManager_DeleteReportsConfirm")), 1)) : vue.createCommentVNode("", true),
-          _ctx.enabled && _ctx.enableDeleteLogs ? (vue.openBlock(), vue.createElementBlock("h2", _hoisted_6$4, vue.toDisplayString(_ctx.translate("PrivacyManager_DeleteBothConfirm")), 1)) : vue.createCommentVNode("", true)
+          _ctx.enabled && !_ctx.enableDeleteLogs ? (vue.openBlock(), vue.createElementBlock("h2", _hoisted_5$8, vue.toDisplayString(_ctx.translate("PrivacyManager_DeleteReportsConfirm")), 1)) : vue.createCommentVNode("", true),
+          _ctx.enabled && _ctx.enableDeleteLogs ? (vue.openBlock(), vue.createElementBlock("h2", _hoisted_6$6, vue.toDisplayString(_ctx.translate("PrivacyManager_DeleteBothConfirm")), 1)) : vue.createCommentVNode("", true)
         ]),
         _: 1
       }, 8, ["modelValue", "onConfirmed"])
@@ -2313,8 +2313,8 @@ var __async = (__this, __arguments, generator) => {
       [_directive_form]
     ]);
   }
-  const DeleteOldReports = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$b]]);
-  const _sfc_main$a = vue.defineComponent({
+  const DeleteOldReports = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$d]]);
+  const _sfc_main$c = vue.defineComponent({
     props: {
       isDataPurgeSettingsEnabled: Boolean,
       deleteData: {
@@ -2406,35 +2406,35 @@ var __async = (__this, __arguments, generator) => {
       }
     }
   });
-  const _hoisted_1$a = { id: "formDeleteSettings" };
-  const _hoisted_2$9 = { id: "deleteSchedulingSettings" };
-  const _hoisted_3$8 = {
+  const _hoisted_1$c = { id: "formDeleteSettings" };
+  const _hoisted_2$b = { id: "deleteSchedulingSettings" };
+  const _hoisted_3$a = {
     id: "deleteSchedulingSettingsInlineHelp",
     class: "inline-help-node"
   };
-  const _hoisted_4$7 = { key: 0 };
-  const _hoisted_5$5 = {
+  const _hoisted_4$9 = { key: 0 };
+  const _hoisted_5$7 = {
     key: 0,
     id: "deleteDataEstimateSect",
     class: "form-group row"
   };
-  const _hoisted_6$3 = {
+  const _hoisted_6$5 = {
     class: "col s12",
     id: "databaseSizeHeadline"
   };
-  const _hoisted_7$3 = { class: "col s12 m6" };
-  const _hoisted_8$2 = ["innerHTML"];
-  const _hoisted_9$2 = { class: "col s12 m6" };
-  const _hoisted_10$2 = {
+  const _hoisted_7$5 = { class: "col s12 m6" };
+  const _hoisted_8$4 = ["innerHTML"];
+  const _hoisted_9$3 = { class: "col s12 m6" };
+  const _hoisted_10$3 = {
     key: 0,
     class: "form-help"
   };
-  const _hoisted_11$1 = {
+  const _hoisted_11$2 = {
     class: "ui-confirm",
     id: "saveSettingsBeforePurge"
   };
-  const _hoisted_12$1 = ["value"];
-  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+  const _hoisted_12$2 = ["value"];
+  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_ActivityIndicator = vue.resolveComponent("ActivityIndicator");
     const _component_Field = vue.resolveComponent("Field");
     const _component_SaveButton = vue.resolveComponent("SaveButton");
@@ -2442,13 +2442,13 @@ var __async = (__this, __arguments, generator) => {
     const _component_ContentBlock = vue.resolveComponent("ContentBlock");
     const _directive_form = vue.resolveDirective("form");
     return vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
-      vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", _hoisted_1$a, [
+      vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", _hoisted_1$c, [
         vue.withDirectives(vue.createVNode(_component_ContentBlock, {
           id: "scheduleSettingsHeadline",
           "content-title": _ctx.translate("PrivacyManager_DeleteSchedulingSettings")
         }, {
           default: vue.withCtx(() => [
-            vue.createElementVNode("div", _hoisted_2$9, [
+            vue.createElementVNode("div", _hoisted_2$b, [
               vue.createElementVNode("div", null, [
                 vue.createVNode(_component_Field, {
                   uicontrol: "select",
@@ -2459,8 +2459,8 @@ var __async = (__this, __arguments, generator) => {
                   options: _ctx.scheduleDeletionOptions
                 }, {
                   "inline-help": vue.withCtx(() => [
-                    vue.createElementVNode("div", _hoisted_3$8, [
-                      _ctx.deleteData.lastRun ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_4$7, [
+                    vue.createElementVNode("div", _hoisted_3$a, [
+                      _ctx.deleteData.lastRun ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_4$9, [
                         vue.createElementVNode("strong", null, vue.toDisplayString(_ctx.translate("PrivacyManager_LastDelete")) + ":", 1),
                         vue.createTextVNode(" " + vue.toDisplayString(_ctx.deleteData.lastRunPretty) + " ", 1),
                         _cache[6] || (_cache[6] = vue.createElementVNode("br", null, null, -1)),
@@ -2490,20 +2490,20 @@ var __async = (__this, __arguments, generator) => {
                 }, 8, ["title", "modelValue", "options"])
               ])
             ]),
-            _ctx.deleteData.config.enable_database_size_estimate === "1" || _ctx.deleteData.config.enable_database_size_estimate === 1 ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_5$5, [
-              vue.createElementVNode("h3", _hoisted_6$3, vue.toDisplayString(_ctx.translate("PrivacyManager_ReportsDataSavedEstimate")), 1),
-              vue.createElementVNode("div", _hoisted_7$3, [
+            _ctx.deleteData.config.enable_database_size_estimate === "1" || _ctx.deleteData.config.enable_database_size_estimate === 1 ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_5$7, [
+              vue.createElementVNode("h3", _hoisted_6$5, vue.toDisplayString(_ctx.translate("PrivacyManager_ReportsDataSavedEstimate")), 1),
+              vue.createElementVNode("div", _hoisted_7$5, [
                 vue.withDirectives(vue.createElementVNode("div", {
                   id: "deleteDataEstimate",
                   innerHTML: _ctx.$sanitize(_ctx.estimation)
-                }, null, 8, _hoisted_8$2), [
+                }, null, 8, _hoisted_8$4), [
                   [vue.vShow, _ctx.showEstimate]
                 ]),
                 _cache[10] || (_cache[10] = vue.createTextVNode(" ", -1)),
                 vue.createVNode(_component_ActivityIndicator, { loading: _ctx.loadingEstimation }, null, 8, ["loading"])
               ]),
-              vue.createElementVNode("div", _hoisted_9$2, [
-                _ctx.deleteData.config.enable_auto_database_size_estimate !== "1" && _ctx.deleteData.config.enable_auto_database_size_estimate !== 1 ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_10$2, [
+              vue.createElementVNode("div", _hoisted_9$3, [
+                _ctx.deleteData.config.enable_auto_database_size_estimate !== "1" && _ctx.deleteData.config.enable_auto_database_size_estimate !== 1 ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_10$3, [
                   vue.createElementVNode("a", {
                     id: "getPurgeEstimateLink",
                     href: "#",
@@ -2539,18 +2539,18 @@ var __async = (__this, __arguments, generator) => {
       ])), [
         [_directive_form]
       ]),
-      vue.createElementVNode("div", _hoisted_11$1, [
+      vue.createElementVNode("div", _hoisted_11$2, [
         vue.createElementVNode("h2", null, vue.toDisplayString(_ctx.translate("PrivacyManager_SaveSettingsBeforePurge")), 1),
         vue.createElementVNode("input", {
           role: "yes",
           type: "button",
           value: _ctx.translate("General_Ok")
-        }, null, 8, _hoisted_12$1)
+        }, null, 8, _hoisted_12$2)
       ])
     ], 64);
   }
-  const ScheduleReportDeletion = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$a]]);
-  const _sfc_main$9 = vue.defineComponent({
+  const ScheduleReportDeletion = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$c]]);
+  const _sfc_main$b = vue.defineComponent({
     props: {
       consentManagerName: {
         type: String,
@@ -2601,11 +2601,11 @@ var __async = (__this, __arguments, generator) => {
       }
     }
   });
-  const _hoisted_1$9 = ["innerHTML"];
-  const _hoisted_2$8 = ["innerHTML"];
-  const _hoisted_3$7 = ["innerHTML"];
-  const _hoisted_4$6 = ["innerHTML"];
-  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+  const _hoisted_1$b = ["innerHTML"];
+  const _hoisted_2$a = ["innerHTML"];
+  const _hoisted_3$9 = ["innerHTML"];
+  const _hoisted_4$8 = ["innerHTML"];
+  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_ContentBlock = vue.resolveComponent("ContentBlock");
     const _directive_content_intro = vue.resolveDirective("content-intro");
     return vue.openBlock(), vue.createElementBlock("div", null, [
@@ -2622,11 +2622,11 @@ var __async = (__this, __arguments, generator) => {
         default: vue.withCtx(() => [
           vue.createElementVNode("p", {
             innerHTML: _ctx.$sanitize(_ctx.consentManagerDetectedText)
-          }, null, 8, _hoisted_1$9),
+          }, null, 8, _hoisted_1$b),
           _ctx.consentManagerIsConnected ? (vue.openBlock(), vue.createElementBlock("p", {
             key: 0,
             innerHTML: _ctx.$sanitize(_ctx.translate("PrivacyManager_ConsentManagerConnected", _ctx.consentManagerName))
-          }, null, 8, _hoisted_2$8)) : vue.createCommentVNode("", true)
+          }, null, 8, _hoisted_2$a)) : vue.createCommentVNode("", true)
         ]),
         _: 1
       }, 8, ["content-title"])) : vue.createCommentVNode("", true),
@@ -2702,16 +2702,16 @@ var __async = (__this, __arguments, generator) => {
           vue.createElementVNode("p", null, vue.toDisplayString(_ctx.translate("PrivacyManager_ConsentManagementPlatformsIntro")), 1),
           vue.createElementVNode("ul", {
             innerHTML: _ctx.$sanitize(_ctx.consentManagersList)
-          }, null, 8, _hoisted_3$7),
+          }, null, 8, _hoisted_3$9),
           vue.createElementVNode("p", {
             innerHTML: _ctx.$sanitize(_ctx.consentManagementPlatformsOutro)
-          }, null, 8, _hoisted_4$6)
+          }, null, 8, _hoisted_4$8)
         ]),
         _: 1
       }, 8, ["content-title"])
     ]);
   }
-  const AskingForConsent = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$9]]);
+  const AskingForConsent = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$b]]);
   function externalLinkTranslate(tokenSuffix, url) {
     return CoreHome.translate(
       `PrivacyManager_${tokenSuffix}`,
@@ -2719,7 +2719,7 @@ var __async = (__this, __arguments, generator) => {
       "</a>"
     );
   }
-  const _sfc_main$8 = vue.defineComponent({
+  const _sfc_main$a = vue.defineComponent({
     props: {
       afterGDPROverviewIntroContent: String,
       deleteLogsEnable: Boolean,
@@ -2799,29 +2799,29 @@ var __async = (__this, __arguments, generator) => {
       }
     }
   });
-  const _hoisted_1$8 = { class: "gdprOverview" };
-  const _hoisted_2$7 = ["innerHTML"];
-  const _hoisted_3$6 = ["innerHTML"];
-  const _hoisted_4$5 = ["innerHTML"];
-  const _hoisted_5$4 = ["innerHTML"];
-  const _hoisted_6$2 = ["innerHTML"];
-  const _hoisted_7$2 = ["innerHTML"];
-  const _hoisted_8$1 = ["innerHTML"];
-  const _hoisted_9$1 = ["innerHTML"];
-  const _hoisted_10$1 = ["innerHTML"];
-  const _hoisted_11 = ["innerHTML"];
-  const _hoisted_12 = ["innerHTML"];
+  const _hoisted_1$a = { class: "gdprOverview" };
+  const _hoisted_2$9 = ["innerHTML"];
+  const _hoisted_3$8 = ["innerHTML"];
+  const _hoisted_4$7 = ["innerHTML"];
+  const _hoisted_5$6 = ["innerHTML"];
+  const _hoisted_6$4 = ["innerHTML"];
+  const _hoisted_7$4 = ["innerHTML"];
+  const _hoisted_8$3 = ["innerHTML"];
+  const _hoisted_9$2 = ["innerHTML"];
+  const _hoisted_10$2 = ["innerHTML"];
+  const _hoisted_11$1 = ["innerHTML"];
+  const _hoisted_12$1 = ["innerHTML"];
   const _hoisted_13 = ["innerHTML"];
   const _hoisted_14 = ["innerHTML"];
   const _hoisted_15 = ["innerHTML"];
   const _hoisted_16 = ["innerHTML"];
   const _hoisted_17 = ["innerHTML"];
   const _hoisted_18 = ["innerHTML"];
-  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_VueEntryContainer = vue.resolveComponent("VueEntryContainer");
     const _component_ContentBlock = vue.resolveComponent("ContentBlock");
     const _directive_content_intro = vue.resolveDirective("content-intro");
-    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$8, [
+    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$a, [
       vue.withDirectives((vue.openBlock(), vue.createElementBlock("div", null, [
         vue.createElementVNode("h2", null, vue.toDisplayString(_ctx.translate("PrivacyManager_GdprOverview")), 1),
         vue.createElementVNode("p", null, vue.toDisplayString(_ctx.translate("PrivacyManager_GdprOverviewIntro1")), 1),
@@ -2854,7 +2854,7 @@ var __async = (__this, __arguments, generator) => {
           vue.createElementVNode("p", null, [
             vue.createElementVNode("span", {
               innerHTML: _ctx.$sanitize(_ctx.dataProcessingAgreementIntro1)
-            }, null, 8, _hoisted_2$7)
+            }, null, 8, _hoisted_2$9)
           ]),
           vue.createElementVNode("p", null, vue.toDisplayString(_ctx.translate("PrivacyManager_DataProcessingAgreementIntro2")), 1)
         ]),
@@ -2870,7 +2870,7 @@ var __async = (__this, __arguments, generator) => {
             _cache[1] || (_cache[1] = vue.createElementVNode("br", null, null, -1)),
             vue.createElementVNode("span", {
               innerHTML: _ctx.$sanitize(_ctx.gdprChecklistDesc2)
-            }, null, 8, _hoisted_3$6)
+            }, null, 8, _hoisted_3$8)
           ])
         ]),
         _: 1
@@ -2884,19 +2884,19 @@ var __async = (__this, __arguments, generator) => {
             vue.createElementVNode("li", null, vue.toDisplayString(_ctx.translate("PrivacyManager_IndividualsRightsInform")), 1),
             vue.createElementVNode("li", {
               innerHTML: _ctx.$sanitize(_ctx.rightsLinkText("IndividualsRightsAccess"))
-            }, null, 8, _hoisted_4$5),
+            }, null, 8, _hoisted_4$7),
             vue.createElementVNode("li", {
               innerHTML: _ctx.$sanitize(_ctx.rightsLinkText("IndividualsRightsErasure"))
-            }, null, 8, _hoisted_5$4),
+            }, null, 8, _hoisted_5$6),
             vue.createElementVNode("li", {
               innerHTML: _ctx.$sanitize(_ctx.rightsLinkText("IndividualsRightsRectification"))
-            }, null, 8, _hoisted_6$2),
+            }, null, 8, _hoisted_6$4),
             vue.createElementVNode("li", {
               innerHTML: _ctx.$sanitize(_ctx.rightsLinkText("IndividualsRightsPortability"))
-            }, null, 8, _hoisted_7$2),
+            }, null, 8, _hoisted_7$4),
             vue.createElementVNode("li", {
               innerHTML: _ctx.$sanitize(_ctx.rightsLinkText("IndividualsRightsObject", "usersOptOut"))
-            }, null, 8, _hoisted_8$1),
+            }, null, 8, _hoisted_8$3),
             vue.createElementVNode("li", null, vue.toDisplayString(_ctx.translate("PrivacyManager_IndividualsRightsChildren")), 1)
           ])
         ]),
@@ -2912,10 +2912,10 @@ var __async = (__this, __arguments, generator) => {
             vue.createElementVNode("li", null, vue.toDisplayString(_ctx.translate("PrivacyManager_AwarenessDocumentationDesc2")), 1),
             vue.createElementVNode("li", {
               innerHTML: _ctx.$sanitize(_ctx.awarenessDocumentationDesc3)
-            }, null, 8, _hoisted_9$1),
+            }, null, 8, _hoisted_9$2),
             vue.createElementVNode("li", {
               innerHTML: _ctx.$sanitize(_ctx.awarenessDocumentationDesc4)
-            }, null, 8, _hoisted_10$1)
+            }, null, 8, _hoisted_10$2)
           ])
         ]),
         _: 1
@@ -2928,10 +2928,10 @@ var __async = (__this, __arguments, generator) => {
           vue.createElementVNode("ol", null, [
             vue.createElementVNode("li", {
               innerHTML: _ctx.$sanitize(_ctx.securityProceduresDesc1)
-            }, null, 8, _hoisted_11),
+            }, null, 8, _hoisted_11$1),
             vue.createElementVNode("li", {
               innerHTML: _ctx.$sanitize(_ctx.securityProceduresDesc2)
-            }, null, 8, _hoisted_12),
+            }, null, 8, _hoisted_12$1),
             vue.createElementVNode("li", {
               innerHTML: _ctx.$sanitize(_ctx.securityProceduresDesc3)
             }, null, 8, _hoisted_13),
@@ -2978,36 +2978,36 @@ var __async = (__this, __arguments, generator) => {
       }, 8, ["content-title"])
     ]);
   }
-  const GdprOverview = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$8]]);
-  const _sfc_main$7 = vue.defineComponent({
+  const GdprOverview = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$a]]);
+  const _sfc_main$9 = vue.defineComponent({
     components: {
       ContentBlock: CoreHome.ContentBlock
     }
   });
-  const _hoisted_1$7 = { class: "eprivacyLaws" };
-  const _hoisted_2$6 = {
+  const _hoisted_1$9 = { class: "eprivacyLaws" };
+  const _hoisted_2$8 = {
     href: "https://matomo.org/faq/general/eprivacy-directive-national-implementations-and-website-analytics/",
     target: "_blank",
     rel: "noreferrer noopener"
   };
-  const _hoisted_3$5 = {
+  const _hoisted_3$7 = {
     href: "https://matomo.org/faq/how-to/how-do-i-configure-matomo-without-tracking-consent-for-french-visitors-cnil-exemption/",
     target: "_blank",
     rel: "noreferrer noopener"
   };
-  const _hoisted_4$4 = {
+  const _hoisted_4$6 = {
     href: "https://matomo.org/faq/new-to-piwik/configure-matomo-analytics-for-tdddg-ttdsg-compliance/",
     target: "_blank",
     rel: "noreferrer noopener"
   };
-  const _hoisted_5$3 = {
+  const _hoisted_5$5 = {
     href: "https://matomo.org/faq/new-to-piwik/how-do-i-use-matomo-analytics-without-consent-or-cookie-banner/",
     target: "_blank",
     rel: "noreferrer noopener"
   };
-  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_ContentBlock = vue.resolveComponent("ContentBlock");
-    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$7, [
+    return vue.openBlock(), vue.createElementBlock("div", _hoisted_1$9, [
       vue.createVNode(_component_ContentBlock, {
         "content-title": _ctx.translate("PrivacyManager_EPrivacyLaws")
       }, {
@@ -3059,16 +3059,16 @@ var __async = (__this, __arguments, generator) => {
         default: vue.withCtx(() => [
           vue.createElementVNode("ul", null, [
             vue.createElementVNode("li", null, [
-              vue.createElementVNode("a", _hoisted_2$6, vue.toDisplayString(_ctx.translate("PrivacyManager_EPrivacyFurtherInfoDirectiveAndAnalytics")), 1)
+              vue.createElementVNode("a", _hoisted_2$8, vue.toDisplayString(_ctx.translate("PrivacyManager_EPrivacyFurtherInfoDirectiveAndAnalytics")), 1)
             ]),
             vue.createElementVNode("li", null, [
-              vue.createElementVNode("a", _hoisted_3$5, vue.toDisplayString(_ctx.translate("PrivacyManager_EPrivacyFurtherInfoFrenchVisitors")), 1)
+              vue.createElementVNode("a", _hoisted_3$7, vue.toDisplayString(_ctx.translate("PrivacyManager_EPrivacyFurtherInfoFrenchVisitors")), 1)
             ]),
             vue.createElementVNode("li", null, [
-              vue.createElementVNode("a", _hoisted_4$4, vue.toDisplayString(_ctx.translate("PrivacyManager_EPrivacyFurtherInfoTdddgCompliance")), 1)
+              vue.createElementVNode("a", _hoisted_4$6, vue.toDisplayString(_ctx.translate("PrivacyManager_EPrivacyFurtherInfoTdddgCompliance")), 1)
             ]),
             vue.createElementVNode("li", null, [
-              vue.createElementVNode("a", _hoisted_5$3, vue.toDisplayString(_ctx.translate("PrivacyManager_EPrivacyFurtherInfoWithoutConsent")), 1)
+              vue.createElementVNode("a", _hoisted_5$5, vue.toDisplayString(_ctx.translate("PrivacyManager_EPrivacyFurtherInfoWithoutConsent")), 1)
             ])
           ])
         ]),
@@ -3076,8 +3076,8 @@ var __async = (__this, __arguments, generator) => {
       }, 8, ["content-title"])
     ]);
   }
-  const EPrivacyLaws = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$7]]);
-  const _sfc_main$6 = vue.defineComponent({
+  const EPrivacyLaws = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$9]]);
+  const _sfc_main$8 = vue.defineComponent({
     props: {
       anonymizations: {
         type: Array,
@@ -3088,17 +3088,17 @@ var __async = (__this, __arguments, generator) => {
       ContentTable: CoreHome.ContentTable
     }
   });
-  const _hoisted_1$6 = { key: 0 };
-  const _hoisted_2$5 = { key: 1 };
-  const _hoisted_3$4 = { key: 2 };
-  const _hoisted_4$3 = { key: 3 };
-  const _hoisted_5$2 = { key: 0 };
-  const _hoisted_6$1 = ["title"];
-  const _hoisted_7$1 = { key: 1 };
-  const _hoisted_8 = ["title"];
-  const _hoisted_9 = { key: 2 };
-  const _hoisted_10 = ["title"];
-  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+  const _hoisted_1$8 = { key: 0 };
+  const _hoisted_2$7 = { key: 1 };
+  const _hoisted_3$6 = { key: 2 };
+  const _hoisted_4$5 = { key: 3 };
+  const _hoisted_5$4 = { key: 0 };
+  const _hoisted_6$3 = ["title"];
+  const _hoisted_7$3 = { key: 1 };
+  const _hoisted_8$2 = ["title"];
+  const _hoisted_9$1 = { key: 2 };
+  const _hoisted_10$1 = ["title"];
+  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
     const _directive_content_table = vue.resolveDirective("content-table");
     return vue.openBlock(), vue.createElementBlock("div", null, [
       vue.createElementVNode("h3", null, vue.toDisplayString(_ctx.translate("PrivacyManager_PreviousRawDataAnonymizations")), 1),
@@ -3121,37 +3121,37 @@ var __async = (__this, __arguments, generator) => {
               vue.createElementVNode("td", null, vue.toDisplayString(entry.sites.join(", ")), 1),
               vue.createElementVNode("td", null, vue.toDisplayString(entry.date_start) + " - " + vue.toDisplayString(entry.date_end), 1),
               vue.createElementVNode("td", null, [
-                entry.anonymize_ip ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_1$6, [
+                entry.anonymize_ip ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_1$8, [
                   vue.createTextVNode(vue.toDisplayString(_ctx.translate("PrivacyManager_IPAddress")), 1),
                   _cache[0] || (_cache[0] = vue.createElementVNode("br", null, null, -1))
                 ])) : vue.createCommentVNode("", true),
-                entry.anonymize_location ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$5, [
+                entry.anonymize_location ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_2$7, [
                   vue.createTextVNode(vue.toDisplayString(_ctx.translate("Overlay_Location")), 1),
                   _cache[1] || (_cache[1] = vue.createElementVNode("br", null, null, -1))
                 ])) : vue.createCommentVNode("", true),
-                entry.anonymize_userid ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$4, vue.toDisplayString(_ctx.translate("General_UserId")), 1)) : vue.createCommentVNode("", true),
-                !entry.anonymize_ip && !entry.anonymize_location && !entry.anonymize_userid ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_4$3, "-")) : vue.createCommentVNode("", true)
+                entry.anonymize_userid ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_3$6, vue.toDisplayString(_ctx.translate("General_UserId")), 1)) : vue.createCommentVNode("", true),
+                !entry.anonymize_ip && !entry.anonymize_location && !entry.anonymize_userid ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_4$5, "-")) : vue.createCommentVNode("", true)
               ]),
               vue.createElementVNode("td", null, vue.toDisplayString(entry.unset_visit_columns.join(", ")), 1),
               vue.createElementVNode("td", null, vue.toDisplayString(entry.unset_link_visit_action_columns.join(", ")), 1),
               vue.createElementVNode("td", null, [
-                !entry.job_start_date ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_5$2, [
+                !entry.job_start_date ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_5$4, [
                   vue.createElementVNode("span", {
                     class: "icon-info",
                     style: { "cursor": "help" },
                     title: `${_ctx.translate("PrivacyManager_ScheduledDate", entry.scheduled_date || "")}`
-                  }, null, 8, _hoisted_6$1),
+                  }, null, 8, _hoisted_6$3),
                   vue.createTextVNode(" " + vue.toDisplayString(_ctx.translate("PrivacyManager_Scheduled")), 1)
-                ])) : entry.job_start_date && !entry.job_finish_date ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_7$1, [
+                ])) : entry.job_start_date && !entry.job_finish_date ? (vue.openBlock(), vue.createElementBlock("span", _hoisted_7$3, [
                   vue.createElementVNode("span", {
                     class: "icon-info",
                     style: { "cursor": "help" },
                     title: `${_ctx.translate("PrivacyManager_ScheduledDate", entry.scheduled_date || "")}.
 ${_ctx.translate("PrivacyManager_JobStartDate", entry.job_start_date)}.
 ${_ctx.translate("PrivacyManager_CurrentOutput", entry.output)}`
-                  }, null, 8, _hoisted_8),
+                  }, null, 8, _hoisted_8$2),
                   vue.createTextVNode(" " + vue.toDisplayString(_ctx.translate("PrivacyManager_InProgress")), 1)
-                ])) : (vue.openBlock(), vue.createElementBlock("span", _hoisted_9, [
+                ])) : (vue.openBlock(), vue.createElementBlock("span", _hoisted_9$1, [
                   vue.createElementVNode("span", {
                     class: "icon-info",
                     style: { "cursor": "help" },
@@ -3159,7 +3159,7 @@ ${_ctx.translate("PrivacyManager_CurrentOutput", entry.output)}`
 ${_ctx.translate("PrivacyManager_JobStartDate", entry.job_start_date)}.
 ${_ctx.translate("PrivacyManager_JobFinishDate", entry.job_finish_date)}.
 ${_ctx.translate("PrivacyManager_Output", entry.output)}`
-                  }, null, 8, _hoisted_10),
+                  }, null, 8, _hoisted_10$1),
                   vue.createTextVNode(" " + vue.toDisplayString(_ctx.translate("General_Done")), 1)
                 ]))
               ])
@@ -3171,8 +3171,8 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
       ])
     ]);
   }
-  const PreviousAnonymizations = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$6]]);
-  const _sfc_main$5 = vue.defineComponent({
+  const PreviousAnonymizations = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$8]]);
+  const _sfc_main$7 = vue.defineComponent({
     props: {
       ipAnonymizerEnabled: Boolean,
       anonymizeUserId: Boolean,
@@ -3258,11 +3258,11 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
       }
     }
   });
-  const _hoisted_1$5 = ["innerHTML"];
-  const _hoisted_2$4 = ["innerHTML"];
-  const _hoisted_3$3 = { key: 0 };
-  const _hoisted_4$2 = { key: 1 };
-  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  const _hoisted_1$7 = ["innerHTML"];
+  const _hoisted_2$6 = ["innerHTML"];
+  const _hoisted_3$5 = { key: 0 };
+  const _hoisted_4$4 = { key: 1 };
+  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_EnrichedHeadline = vue.resolveComponent("EnrichedHeadline");
     const _component_AnonymizeIp = vue.resolveComponent("AnonymizeIp");
     const _component_ContentBlock = vue.resolveComponent("ContentBlock");
@@ -3288,10 +3288,10 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
           vue.createElementVNode("span", {
             innerHTML: _ctx.$sanitize(_ctx.teaserHeader),
             style: { "margin-right": "3.5px" }
-          }, null, 8, _hoisted_1$5),
+          }, null, 8, _hoisted_1$7),
           vue.createElementVNode("span", {
             innerHTML: _ctx.$sanitize(_ctx.seeAlsoOurOfficialGuide)
-          }, null, 8, _hoisted_2$4)
+          }, null, 8, _hoisted_2$6)
         ])
       ])), [
         [_directive_content_intro]
@@ -3320,7 +3320,7 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
         ]),
         _: 1
       }, 8, ["content-title"]),
-      _ctx.isDataPurgeSettingsEnabled ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$3, [
+      _ctx.isDataPurgeSettingsEnabled ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$5, [
         vue.createVNode(_component_ContentBlock, {
           id: "deleteLogsAnchor",
           "content-title": _ctx.translate("PrivacyManager_DeleteOldRawData")
@@ -3364,7 +3364,7 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
       }, {
         default: vue.withCtx(() => [
           vue.createElementVNode("p", null, vue.toDisplayString(_ctx.translate("PrivacyManager_AnonymizePreviousDataDescription")), 1),
-          _ctx.isSuperUser ? (vue.openBlock(), vue.createBlock(_component_AnonymizeLogData, { key: 0 })) : (vue.openBlock(), vue.createElementBlock("p", _hoisted_4$2, vue.toDisplayString(_ctx.translate("PrivacyManager_AnonymizePreviousDataOnlySuperUser")), 1)),
+          _ctx.isSuperUser ? (vue.openBlock(), vue.createBlock(_component_AnonymizeLogData, { key: 0 })) : (vue.openBlock(), vue.createElementBlock("p", _hoisted_4$4, vue.toDisplayString(_ctx.translate("PrivacyManager_AnonymizePreviousDataOnlySuperUser")), 1)),
           _cache[0] || (_cache[0] = vue.createElementVNode("br", null, null, -1)),
           vue.createVNode(_component_PreviousAnonymizations, { anonymizations: _ctx.anonymizations }, null, 8, ["anonymizations"])
         ]),
@@ -3372,7 +3372,7 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
       }, 8, ["content-title"])
     ]);
   }
-  const PrivacySettings = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$5]]);
+  const PrivacySettings = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$7]]);
   function fetchCompliancePolicies() {
     return __async(this, null, function* () {
       return CoreHome.AjaxHelper.fetch(
@@ -3458,22 +3458,22 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
       saveComplianceStatus
     };
   }
-  const statusClassMap = {
+  const statusClassMap$1 = {
     compliant: "compliant",
     non_compliant: "non-compliant",
     unknown: "unknown"
   };
-  const iconClassMap = {
+  const iconClassMap$1 = {
     compliant: "icon-ok",
     non_compliant: "icon-close",
     unknown: "icon-circle"
   };
-  const statusTextMap = {
+  const statusTextMap$1 = {
     compliant: "PrivacyManager_ComplianceCompliant",
     non_compliant: "PrivacyManager_ComplianceNonCompliant",
     unknown: "PrivacyManager_ComplianceComplianceUnknown"
   };
-  const _sfc_main$4 = vue.defineComponent({
+  const _sfc_main$6 = vue.defineComponent({
     props: {
       results: {
         type: Array,
@@ -3482,28 +3482,28 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
     },
     methods: {
       getStatusClass(value) {
-        return statusClassMap[value] || statusClassMap.unknown;
+        return statusClassMap$1[value] || statusClassMap$1.unknown;
       },
       getIconClass(value) {
-        return iconClassMap[value] || iconClassMap.unknown;
+        return iconClassMap$1[value] || iconClassMap$1.unknown;
       },
       getStatusText(value) {
-        return statusTextMap[value] || statusTextMap.unknown;
+        return statusTextMap$1[value] || statusTextMap$1.unknown;
       }
     }
   });
-  const _hoisted_1$4 = { class: "card-table dataTable compliance" };
-  const _hoisted_2$3 = { class: "label" };
-  const _hoisted_3$2 = { class: "label" };
-  const _hoisted_4$1 = { class: "label" };
-  const _hoisted_5$1 = ["innerHTML"];
-  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("table", _hoisted_1$4, [
+  const _hoisted_1$6 = { class: "card-table dataTable compliance" };
+  const _hoisted_2$5 = { class: "label" };
+  const _hoisted_3$4 = { class: "label" };
+  const _hoisted_4$3 = { class: "label" };
+  const _hoisted_5$3 = ["innerHTML"];
+  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("table", _hoisted_1$6, [
       vue.createElementVNode("thead", null, [
         vue.createElementVNode("tr", null, [
-          vue.createElementVNode("th", _hoisted_2$3, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceTableSettingName")), 1),
-          vue.createElementVNode("th", _hoisted_3$2, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceTableSettingStatus")), 1),
-          vue.createElementVNode("th", _hoisted_4$1, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceTableSettingNotes")), 1)
+          vue.createElementVNode("th", _hoisted_2$5, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceTableSettingName")), 1),
+          vue.createElementVNode("th", _hoisted_3$4, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceTableSettingStatus")), 1),
+          vue.createElementVNode("th", _hoisted_4$3, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceTableSettingNotes")), 1)
         ])
       ]),
       vue.createElementVNode("tbody", null, [
@@ -3520,14 +3520,14 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
             ], 2),
             vue.createElementVNode("td", {
               innerHTML: _ctx.$sanitize(item.notes)
-            }, null, 8, _hoisted_5$1)
+            }, null, 8, _hoisted_5$3)
           ]);
         }), 128))
       ])
     ]);
   }
-  const ComplianceTable = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$4]]);
-  const _sfc_main$3 = vue.defineComponent({
+  const ComplianceTable = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$6]]);
+  const _sfc_main$5 = vue.defineComponent({
     props: {
       idSite: {
         type: String,
@@ -3591,16 +3591,16 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
       };
     }
   });
-  const _hoisted_1$3 = ["innerHTML"];
-  const _hoisted_2$2 = {
+  const _hoisted_1$5 = ["innerHTML"];
+  const _hoisted_2$4 = {
     key: 0,
     class: "notification system notification-error"
   };
-  const _hoisted_3$1 = {
+  const _hoisted_3$3 = {
     key: 0,
     class: "notification system notification-error"
   };
-  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_ActivityIndicator = vue.resolveComponent("ActivityIndicator");
     const _component_ComplianceTable = vue.resolveComponent("ComplianceTable");
     const _component_Field = vue.resolveComponent("Field");
@@ -3611,12 +3611,12 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
       default: vue.withCtx(() => [
         vue.createElementVNode("p", {
           innerHTML: _ctx.$sanitize(_ctx.description)
-        }, null, 8, _hoisted_1$3),
+        }, null, 8, _hoisted_1$5),
         vue.createVNode(_component_ActivityIndicator, {
           loading: _ctx.state.loading
         }, null, 8, ["loading"]),
         !_ctx.state.loading ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 0 }, [
-          _ctx.state.fetchComplianceError ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$2, vue.toDisplayString(_ctx.translate("General_ErrorTryAgain")) + " " + vue.toDisplayString(_ctx.translate("General_ExceptionContactSupportGeneric", ["", ""])), 1)) : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
+          _ctx.state.fetchComplianceError ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_2$4, vue.toDisplayString(_ctx.translate("General_ErrorTryAgain")) + " " + vue.toDisplayString(_ctx.translate("General_ExceptionContactSupportGeneric", ["", ""])), 1)) : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
             vue.createVNode(_component_ComplianceTable, {
               results: _ctx.state.complianceRequirements
             }, null, 8, ["results"]),
@@ -3630,7 +3630,7 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
                 modelValue: _ctx.shouldEnforceComplianceMode,
                 "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => _ctx.shouldEnforceComplianceMode = $event)
               }, null, 8, ["name", "title", "introduction", "inline-help", "modelValue"]),
-              _ctx.state.saveComplianceError ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$1, vue.toDisplayString(_ctx.translate("General_ErrorTryAgain")) + " " + vue.toDisplayString(_ctx.translate("General_ExceptionContactSupportGeneric", ["", ""])), 1)) : vue.createCommentVNode("", true),
+              _ctx.state.saveComplianceError ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$3, vue.toDisplayString(_ctx.translate("General_ErrorTryAgain")) + " " + vue.toDisplayString(_ctx.translate("General_ExceptionContactSupportGeneric", ["", ""])), 1)) : vue.createCommentVNode("", true),
               vue.createVNode(_component_SaveButton, {
                 class: vue.normalizeClass("site-" + _ctx.idSite + "-" + _ctx.complianceType + "-save"),
                 onConfirm: _cache[1] || (_cache[1] = ($event) => _ctx.showPasswordConfirmation = true),
@@ -3649,11 +3649,453 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
       _: 1
     }, 8, ["content-title"]);
   }
-  const ComplianceOverview = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3]]);
+  const ComplianceOverview = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$5]]);
+  /*!
+   * Matomo - free/libre analytics platform
+   *
+   * @link    https://matomo.org
+   * @license https://www.gnu.org/licenses/gpl-3.0.html GPL v3 or later
+   */
+  function createGranularComplianceStore(policy) {
+    const state = vue.reactive({
+      idSite: null,
+      loading: false,
+      saving: false,
+      configControlled: false,
+      policyEnforced: false,
+      settings: [],
+      localEnforced: {},
+      fetchError: null,
+      saveError: null
+    });
+    function applyPayload(payload) {
+      state.configControlled = payload.configControlled;
+      state.policyEnforced = payload.policyEnforced;
+      state.settings = payload.settings;
+      const localEnforced = {};
+      payload.settings.forEach((setting) => {
+        if (setting.toggleable) {
+          localEnforced[setting.id] = !!setting.enforced;
+        }
+      });
+      state.localEnforced = localEnforced;
+    }
+    const dirtySettingIds = vue.computed(
+      () => state.settings.filter((s) => s.toggleable && state.localEnforced[s.id] !== !!s.enforced).map((s) => s.id)
+    );
+    function fetchSettings() {
+      if (!state.idSite) {
+        return;
+      }
+      const requestedIdSite = state.idSite;
+      state.loading = true;
+      state.fetchError = null;
+      CoreHome.AjaxHelper.fetch(
+        {
+          idSite: requestedIdSite,
+          compliancePolicy: policy,
+          method: "PrivacyManager.getCompliancePolicySettings"
+        },
+        {
+          createErrorNotification: false
+        }
+      ).then((payload) => {
+        if (state.idSite === requestedIdSite) {
+          applyPayload(payload);
+        }
+      }).catch((error) => {
+        if (state.idSite === requestedIdSite) {
+          state.fetchError = error.message || error;
+        }
+      }).finally(() => {
+        if (state.idSite === requestedIdSite) {
+          state.loading = false;
+        }
+      });
+    }
+    function setIdSite(idSite) {
+      state.idSite = idSite;
+      fetchSettings();
+    }
+    function toggleSetting(settingId) {
+      if (state.configControlled || !(settingId in state.localEnforced)) {
+        return;
+      }
+      state.localEnforced[settingId] = !state.localEnforced[settingId];
+    }
+    function enforceAll() {
+      if (state.configControlled) {
+        return;
+      }
+      state.settings.forEach((setting) => {
+        if (setting.toggleable) {
+          state.localEnforced[setting.id] = true;
+        }
+      });
+    }
+    function save(password) {
+      const settingValues = {};
+      dirtySettingIds.value.forEach((settingId) => {
+        settingValues[settingId] = state.localEnforced[settingId] ? 1 : 0;
+      });
+      if (!Object.keys(settingValues).length) {
+        return;
+      }
+      const requestedIdSite = state.idSite;
+      state.saving = true;
+      state.saveError = null;
+      CoreHome.AjaxHelper.post(
+        {
+          idSite: requestedIdSite,
+          compliancePolicy: policy,
+          method: "PrivacyManager.setCompliancePolicySettings"
+        },
+        {
+          settingValues,
+          passwordConfirmation: password
+        },
+        {
+          createErrorNotification: false
+        }
+      ).then((payload) => {
+        if (state.idSite === requestedIdSite) {
+          applyPayload(payload);
+        }
+      }).catch((error) => {
+        if (state.idSite === requestedIdSite) {
+          state.saveError = error.message || error;
+        }
+      }).finally(() => {
+        state.saving = false;
+      });
+    }
+    const publicState = vue.readonly(state);
+    return {
+      state: publicState,
+      dirtySettingIds,
+      setIdSite,
+      toggleSetting,
+      enforceAll,
+      save
+    };
+  }
+  const statusClassMap = {
+    compliant: "compliant",
+    enforced: "enforced",
+    non_compliant: "non-compliant",
+    on_by_default: "on-by-default",
+    manual: "manual",
+    applies_on_save: "applies-on-save"
+  };
+  const iconClassMap = {
+    compliant: "icon-ok",
+    enforced: "icon-ok",
+    non_compliant: "",
+    on_by_default: "icon-locked",
+    manual: "icon-locked",
+    applies_on_save: "icon-warning"
+  };
+  const statusTextMap = {
+    compliant: "PrivacyManager_ComplianceCompliant",
+    enforced: "PrivacyManager_ComplianceStatusEnforced",
+    non_compliant: "PrivacyManager_ComplianceNonCompliant",
+    on_by_default: "PrivacyManager_ComplianceStatusOnByDefault",
+    manual: "PrivacyManager_ComplianceStatusManual",
+    applies_on_save: "PrivacyManager_ComplianceStatusAppliesOnSave"
+  };
+  const _sfc_main$4 = vue.defineComponent({
+    props: {
+      settings: {
+        type: Array,
+        required: true
+      },
+      localEnforced: {
+        type: Object,
+        default: () => ({})
+      },
+      dirtySettingIds: {
+        type: Array,
+        default: () => []
+      },
+      showToggles: {
+        type: Boolean,
+        default: true
+      },
+      disabled: {
+        type: Boolean,
+        default: false
+      }
+    },
+    emits: ["toggle"],
+    methods: {
+      getEffectiveStatus(setting) {
+        if (setting.toggleable && this.dirtySettingIds.indexOf(setting.id) !== -1) {
+          return "applies_on_save";
+        }
+        return setting.status;
+      },
+      getStatusClass(setting) {
+        return statusClassMap[this.getEffectiveStatus(setting)] || "unknown";
+      },
+      getIconClass(setting) {
+        const status = this.getEffectiveStatus(setting);
+        return status in iconClassMap ? iconClassMap[status] : "icon-circle";
+      },
+      getStatusText(setting) {
+        return statusTextMap[this.getEffectiveStatus(setting)] || "PrivacyManager_ComplianceComplianceUnknown";
+      },
+      isToggledOn(setting) {
+        return !!this.localEnforced[setting.id];
+      }
+    }
+  });
+  const _hoisted_1$4 = { class: "card-table dataTable compliance granularCompliance" };
+  const _hoisted_2$3 = { class: "label" };
+  const _hoisted_3$2 = { class: "label" };
+  const _hoisted_4$2 = { class: "label" };
+  const _hoisted_5$2 = { class: "label" };
+  const _hoisted_6$2 = {
+    key: 0,
+    class: "label toggleColumn"
+  };
+  const _hoisted_7$2 = { class: "sr-only" };
+  const _hoisted_8$1 = { class: "settingName" };
+  const _hoisted_9 = ["innerHTML"];
+  const _hoisted_10 = ["innerHTML"];
+  const _hoisted_11 = {
+    key: 0,
+    class: "toggleColumn"
+  };
+  const _hoisted_12 = ["id", "checked", "disabled", "aria-label", "onChange"];
+  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("table", _hoisted_1$4, [
+      vue.createElementVNode("thead", null, [
+        vue.createElementVNode("tr", null, [
+          vue.createElementVNode("th", _hoisted_2$3, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceTableSettingName")), 1),
+          vue.createElementVNode("th", _hoisted_3$2, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceTableWhatItDoes")), 1),
+          vue.createElementVNode("th", _hoisted_4$2, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceTableImpact")), 1),
+          vue.createElementVNode("th", _hoisted_5$2, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceTableSettingStatus")), 1),
+          _ctx.showToggles ? (vue.openBlock(), vue.createElementBlock("th", _hoisted_6$2, [
+            vue.createElementVNode("span", _hoisted_7$2, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceStatusEnforced")), 1)
+          ])) : vue.createCommentVNode("", true)
+        ])
+      ]),
+      vue.createElementVNode("tbody", null, [
+        (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.settings, (setting) => {
+          return vue.openBlock(), vue.createElementBlock("tr", {
+            key: setting.id
+          }, [
+            vue.createElementVNode("td", _hoisted_8$1, vue.toDisplayString(setting.name), 1),
+            vue.createElementVNode("td", {
+              innerHTML: _ctx.$sanitize(setting.whatItDoes)
+            }, null, 8, _hoisted_9),
+            vue.createElementVNode("td", {
+              innerHTML: _ctx.$sanitize(setting.impact)
+            }, null, 8, _hoisted_10),
+            vue.createElementVNode("td", {
+              class: vue.normalizeClass(["status", _ctx.getStatusClass(setting)])
+            }, [
+              _ctx.getIconClass(setting) ? (vue.openBlock(), vue.createElementBlock("span", {
+                key: 0,
+                class: vue.normalizeClass(["icon", _ctx.getIconClass(setting)])
+              }, null, 2)) : vue.createCommentVNode("", true),
+              vue.createTextVNode(" " + vue.toDisplayString(_ctx.translate(_ctx.getStatusText(setting))), 1)
+            ], 2),
+            _ctx.showToggles ? (vue.openBlock(), vue.createElementBlock("td", _hoisted_11, [
+              setting.toggleable ? (vue.openBlock(), vue.createElementBlock("div", {
+                key: 0,
+                class: vue.normalizeClass(["switch", "switch-" + setting.id.replace(".", "-")])
+              }, [
+                vue.createElementVNode("label", null, [
+                  vue.createElementVNode("input", {
+                    type: "checkbox",
+                    id: "toggle-" + setting.id,
+                    checked: _ctx.isToggledOn(setting),
+                    disabled: _ctx.disabled,
+                    "aria-label": _ctx.translate("PrivacyManager_ComplianceStatusEnforced") + ": " + setting.name,
+                    onChange: ($event) => _ctx.$emit("toggle", setting.id)
+                  }, null, 40, _hoisted_12),
+                  _cache[0] || (_cache[0] = vue.createElementVNode("span", { class: "lever" }, null, -1))
+                ])
+              ], 2)) : vue.createCommentVNode("", true)
+            ])) : vue.createCommentVNode("", true)
+          ]);
+        }), 128))
+      ])
+    ]);
+  }
+  const GranularComplianceTable = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$4]]);
+  const _sfc_main$3 = vue.defineComponent({
+    props: {
+      idSite: {
+        type: String,
+        required: true
+      },
+      complianceType: {
+        type: String,
+        required: true
+      },
+      title: {
+        type: String,
+        required: true
+      },
+      description: {
+        type: String,
+        required: true
+      }
+    },
+    components: {
+      ActivityIndicator: CoreHome.ActivityIndicator,
+      ContentBlock: CoreHome.ContentBlock,
+      GranularComplianceTable,
+      PasswordConfirmation: CorePluginsAdmin.PasswordConfirmation,
+      SaveButton: CorePluginsAdmin.SaveButton
+    },
+    methods: {
+      saveSettings(password) {
+        this.save(password);
+        this.showPasswordConfirmation = false;
+      },
+      resetSave() {
+        this.showPasswordConfirmation = false;
+      }
+    },
+    setup(props) {
+      const store = createGranularComplianceStore(props.complianceType);
+      vue.watch(
+        () => props.idSite,
+        (newSite) => {
+          if (newSite) {
+            store.setIdSite(newSite);
+          }
+        },
+        { immediate: true }
+      );
+      const toggleableSettings = vue.computed(
+        () => store.state.settings.filter((s) => s.section === "settings")
+      );
+      const externalSettings = vue.computed(
+        () => store.state.settings.filter((s) => s.section === "external")
+      );
+      const hasUnsavedChanges = vue.computed(() => store.dirtySettingIds.value.length > 0);
+      const canSave = vue.computed(() => !store.state.configControlled);
+      return {
+        state: store.state,
+        dirtySettingIds: store.dirtySettingIds,
+        toggleSetting: store.toggleSetting,
+        enforceAll: store.enforceAll,
+        save: store.save,
+        toggleableSettings,
+        externalSettings,
+        hasUnsavedChanges,
+        canSave,
+        showPasswordConfirmation: vue.ref(false)
+      };
+    }
+  });
+  const _hoisted_1$3 = {
+    key: 0,
+    class: "granularComplianceHeaderActions"
+  };
+  const _hoisted_2$2 = ["innerHTML"];
+  const _hoisted_3$1 = {
+    key: 0,
+    class: "notification system notification-error"
+  };
+  const _hoisted_4$1 = {
+    key: 0,
+    class: "granularComplianceEnforceAll"
+  };
+  const _hoisted_5$1 = { class: "granularComplianceEnforceAllText" };
+  const _hoisted_6$1 = ["disabled"];
+  const _hoisted_7$1 = { class: "granularComplianceExternalTitle" };
+  const _hoisted_8 = {
+    key: 1,
+    class: "notification system notification-error"
+  };
+  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+    const _component_SaveButton = vue.resolveComponent("SaveButton");
+    const _component_ActivityIndicator = vue.resolveComponent("ActivityIndicator");
+    const _component_GranularComplianceTable = vue.resolveComponent("GranularComplianceTable");
+    const _component_PasswordConfirmation = vue.resolveComponent("PasswordConfirmation");
+    const _component_ContentBlock = vue.resolveComponent("ContentBlock");
+    return vue.openBlock(), vue.createBlock(_component_ContentBlock, { "content-title": _ctx.title }, {
+      default: vue.withCtx(() => [
+        _ctx.canSave ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_1$3, [
+          vue.createVNode(_component_SaveButton, {
+            class: vue.normalizeClass("granularCompliance-" + _ctx.complianceType + "-save-top"),
+            disabled: !_ctx.hasUnsavedChanges,
+            saving: _ctx.state.saving,
+            onConfirm: _cache[0] || (_cache[0] = ($event) => _ctx.showPasswordConfirmation = true),
+            value: _ctx.translate("PrivacyManager_ComplianceReviewAndSave")
+          }, null, 8, ["class", "disabled", "saving", "value"])
+        ])) : vue.createCommentVNode("", true),
+        vue.createElementVNode("p", {
+          innerHTML: _ctx.$sanitize(_ctx.description)
+        }, null, 8, _hoisted_2$2),
+        vue.createVNode(_component_ActivityIndicator, {
+          loading: _ctx.state.loading
+        }, null, 8, ["loading"]),
+        !_ctx.state.loading ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
+          _ctx.state.fetchError ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_3$1, vue.toDisplayString(_ctx.translate("General_ErrorTryAgain")) + " " + vue.toDisplayString(_ctx.translate("General_ExceptionContactSupportGeneric", ["", ""])), 1)) : (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 1 }, [
+            _ctx.canSave ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_4$1, [
+              vue.createElementVNode("div", _hoisted_5$1, [
+                vue.createElementVNode("h3", null, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceEnforceAllTitle")), 1),
+                vue.createElementVNode("p", null, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceEnforceAllDescription")), 1)
+              ]),
+              vue.createElementVNode("button", {
+                type: "button",
+                class: "btn granularComplianceEnforceAllButton",
+                disabled: _ctx.state.saving || _ctx.state.loading,
+                onClick: _cache[1] || (_cache[1] = ($event) => _ctx.enforceAll())
+              }, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceEnforceAllSettings")), 9, _hoisted_6$1)
+            ])) : vue.createCommentVNode("", true),
+            vue.createVNode(_component_GranularComplianceTable, {
+              settings: _ctx.toggleableSettings,
+              "local-enforced": _ctx.state.localEnforced,
+              "dirty-setting-ids": _ctx.dirtySettingIds,
+              disabled: _ctx.state.configControlled || _ctx.state.saving,
+              onToggle: _cache[2] || (_cache[2] = ($event) => _ctx.toggleSetting($event))
+            }, null, 8, ["settings", "local-enforced", "dirty-setting-ids", "disabled"]),
+            vue.createElementVNode("h3", _hoisted_7$1, vue.toDisplayString(_ctx.translate("PrivacyManager_ComplianceManagedOutsideTitle")), 1),
+            vue.createVNode(_component_GranularComplianceTable, {
+              settings: _ctx.externalSettings,
+              "show-toggles": false
+            }, null, 8, ["settings"]),
+            _ctx.state.saveError ? (vue.openBlock(), vue.createElementBlock("div", _hoisted_8, vue.toDisplayString(_ctx.translate("General_ErrorTryAgain")) + " " + vue.toDisplayString(_ctx.translate("General_ExceptionContactSupportGeneric", ["", ""])), 1)) : vue.createCommentVNode("", true),
+            _ctx.canSave ? (vue.openBlock(), vue.createElementBlock(vue.Fragment, { key: 2 }, [
+              vue.createVNode(_component_SaveButton, {
+                class: vue.normalizeClass("granularCompliance-" + _ctx.complianceType + "-save"),
+                disabled: !_ctx.hasUnsavedChanges,
+                saving: _ctx.state.saving,
+                onConfirm: _cache[3] || (_cache[3] = ($event) => _ctx.showPasswordConfirmation = true),
+                value: _ctx.translate("PrivacyManager_ComplianceReviewAndSave")
+              }, null, 8, ["class", "disabled", "saving", "value"]),
+              vue.createVNode(_component_PasswordConfirmation, {
+                "model-value": _ctx.showPasswordConfirmation,
+                passwordFieldId: "passwordGranular" + _ctx.complianceType,
+                onConfirmed: _ctx.saveSettings,
+                onAborted: _ctx.resetSave
+              }, null, 8, ["model-value", "passwordFieldId", "onConfirmed", "onAborted"])
+            ], 64)) : vue.createCommentVNode("", true)
+          ], 64))
+        ], 64)) : vue.createCommentVNode("", true)
+      ]),
+      _: 1
+    }, 8, ["content-title"]);
+  }
+  const GranularComplianceOverview = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$3]]);
   const _sfc_main$2 = vue.defineComponent({
+    props: {
+      granularComplianceEnabled: {
+        type: Boolean,
+        default: false
+      }
+    },
     components: {
       EnrichedHeadline: CoreHome.EnrichedHeadline,
       ComplianceOverview,
+      GranularComplianceOverview,
       SiteSelector: CoreHome.SiteSelector
     },
     setup() {
@@ -3681,6 +4123,7 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
   function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_EnrichedHeadline = vue.resolveComponent("EnrichedHeadline");
     const _component_SiteSelector = vue.resolveComponent("SiteSelector");
+    const _component_GranularComplianceOverview = vue.resolveComponent("GranularComplianceOverview");
     const _component_ComplianceOverview = vue.resolveComponent("ComplianceOverview");
     return vue.openBlock(), vue.createElementBlock(vue.Fragment, null, [
       vue.createElementVNode("h2", null, [
@@ -3699,7 +4142,15 @@ ${_ctx.translate("PrivacyManager_Output", entry.output)}`
         modelValue: _ctx.site,
         "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => _ctx.site = $event)
       }, null, 8, ["modelValue"]),
-      (vue.openBlock(true), vue.createElementBlock(vue.Fragment, null, vue.renderList(_ctx.complianceTypes, (type) => {
+      _ctx.granularComplianceEnabled ? (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 0 }, vue.renderList(_ctx.complianceTypes, (type) => {
+        return vue.openBlock(), vue.createBlock(_component_GranularComplianceOverview, {
+          key: type.id,
+          "id-site": _ctx.siteId,
+          "compliance-type": type.id,
+          title: type.title,
+          description: type.description
+        }, null, 8, ["id-site", "compliance-type", "title", "description"]);
+      }), 128)) : (vue.openBlock(true), vue.createElementBlock(vue.Fragment, { key: 1 }, vue.renderList(_ctx.complianceTypes, (type) => {
         return vue.openBlock(), vue.createBlock(_component_ComplianceOverview, {
           key: type.id,
           "id-site": _ctx.siteId,
